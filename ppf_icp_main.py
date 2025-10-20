@@ -16,6 +16,7 @@ from ppf_icp_utils import (
     debug_get_props,
     transform_cloud,
     show_two_clouds,
+    unify_normals_orientation,
 )
 
 # =============== 路径 ===============
@@ -79,9 +80,10 @@ def main(model_path=MODEL_PATH, scene_path=SCENE_PATH, show=True, save_npz="ppf_
     scene_dn = scene_ds.remove_statistical_outlier(nb_neighbors=30, std_ratio=2.0)[0]
     print(f"[Denoise] model: {len(model_dn.points)}, scene: {len(scene_dn.points)}")
 
-    # 法向一致化（k 近邻，与 MATLAB 等价）
+    # 法向一致化（k 近邻，与 MATLAB 等价） 后面是场景点云和模型点云的朝向一致化,法向在一个方向
     model_dn = estimate_normals_consistent_knn(model_dn, kn_m)
     scene_dn = estimate_normals_consistent_knn(scene_dn, kn_s)
+    model_dn, scene_dn = unify_normals_orientation(model_dn, scene_dn)
 
     # 构造 Nx6（Patch PCA+曲率筛选）
     model_ppf = to_ppf_array_patch(model_dn, PATCH_RADIUS_M, PATCH_MIN_PTS,

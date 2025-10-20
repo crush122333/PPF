@@ -26,6 +26,22 @@ def estimate_normals_consistent_knn(pcd: o3d.geometry.PointCloud, k: int) -> o3d
     pcd.normals = o3d.utility.Vector3dVector(nrm)
     return pcd
 
+def unify_normals_orientation(model_pcd: o3d.geometry.PointCloud,
+                              scene_pcd: o3d.geometry.PointCloud):
+    """
+    统一模型和场景点云的法向朝向方向（使整体平均法向一致）
+    原理：比较平均法向方向，如果夹角>90°则翻转其中之一
+    """
+    n_model = np.mean(np.asarray(model_pcd.normals), axis=0)
+    n_scene = np.mean(np.asarray(scene_pcd.normals), axis=0)
+    n_model /= (np.linalg.norm(n_model) + _EPS)
+    n_scene /= (np.linalg.norm(n_scene) + _EPS)
+
+    if np.dot(n_model, n_scene) < 0:  # 如果反向
+        scene_pcd.normals = o3d.utility.Vector3dVector(-np.asarray(scene_pcd.normals))
+        print("[INFO] flipped scene normals for consistency")
+
+    return model_pcd, scene_pcd
 
 # ---------- Patch PCA + 曲率 ----------
 def _curvature_from_cov(P: np.ndarray):
@@ -203,35 +219,21 @@ def _median_nn_dist(points: np.ndarray, scene_xyz: np.ndarray) -> float:
     return float(np.median(mins))
 
 
-
-
-def _try_pose_variants(pose_in: np.ndarray, model_xyz: np.ndarray, scene_xyz: np.ndarray):               # 模型的jin'xiang
-    """镜像/轴翻转尝试，取 1-NN 中值距离最小（纯 NumPy 版）"""
+def _try_pose_variants(pose_in: np.ndarray, model_xyz: np.ndarray, scene_xyz: np.ndarray):
+    """验证单一姿态的ICP残差（不再尝试镜像翻转）"""
     R0 = pose_in[:3, :3].astype(np.float64, copy=True)
     t0 = pose_in[:3, 3].astype(np.float64, copy=True)
-    flips = [
-        np.eye(3, dtype=np.float64),
-        np.diag([-1, 1, 1]).astype(np.float64),
-        np.diag([1, -1, 1]).astype(np.float64),
-        np.diag([1, 1, -1]).astype(np.float64),
-    ]
+
     M = np.asarray(model_xyz, dtype=np.float64)
     S = np.asarray(scene_xyz, dtype=np.float64)
 
-    best_pose = pose_in.astype(np.float32)
-    best_res = np.inf
-    for F in flips:
-        R = R0 @ F
-        Mtf = (M @ R.T) + t0
-        med = _median_nn_dist(Mtf, S)
-        if med < best_res:
-            T = np.eye(4, dtype=np.float32)
-            T[:3, :3] = R.astype(np.float32)
-            T[:3, 3]  = t0.astype(np.float32)
-            best_pose = T
-            best_res  = med
-    return best_pose, best_res
+    Mtf = (M @ R0.T) + t0
+    med = _median_nn_dist(Mtf, S)
 
+    T = np.eye(4, dtype=np.float32)
+    T[:3, :3] = R0.astype(np.float32)
+    T[:3, 3] = t0.astype(np.float32)
+    return T, float(med)
 
 
 def run_icp_for_candidates(model_xyz: np.ndarray,
@@ -258,7 +260,8 @@ def run_icp_for_candidates(model_xyz: np.ndarray,
         icp_pose, _ = _parse_icp_output(out)
 
         cand1 = icp_pose @ init_pose                               # icp*init  先用PPF粗对齐获取位姿，现在就是icp得到微调，icp_pose @ init_pose代表粗匹配的基础上进行微调
-        cand1_fix, res1 = _try_pose_variants(cand1, M, S)          # 镜像翻转
+        _, res1 = _try_pose_variants(cand1, M, S)
+        cand1_fix = cand1
         print(f"  - cand #{i:02d}: votes={v}, icp_res={res1}, use=icp*init"
 )
         all_logs.append((i, v, float(res1)))
