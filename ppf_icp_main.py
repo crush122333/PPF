@@ -17,6 +17,10 @@ from ppf_icp_utils import (
     transform_cloud,
     show_two_clouds,
     unify_normals_orientation,
+    overlap_centroids_kdtree,
+    show_with_centroids,
+    show_separate_clouds,
+
 )
 
 # =============== 路径 ===============
@@ -139,13 +143,40 @@ def main(model_path=MODEL_PATH, scene_path=SCENE_PATH, show=True, save_npz="ppf_
 
     print(f"\n[FINAL POSE] residual = {best_res} (from candidate #{best_idx})\n{best_pose}")
 
+    # ===== 计算重叠区域质心（模型→场景坐标后，与场景半径匹配）=====
+    try:
+        ctr_scene, ctr_model = overlap_centroids_kdtree(
+            model_xyz=model_ppf[:, :3],           # 未变换模型点（N×3）
+            scene_xyz=scene_ppf[:, :3],           # 场景点（N×3）
+            pose_4x4=best_pose,                   # 最优位姿（把模型变到相机/场景坐标）
+            radius=3.0 * voxel_scene,             # 半径建议 2~3 倍体素
+            min_nn=3,                             # 至少 3 个邻居才算重叠
+            mutual_check=False                    # 需要更稳时可开 True（更慢）
+        )
+        dist_model = float(np.linalg.norm(ctr_model))  # 相机→模型质心（理论）
+        dist_scene = float(np.linalg.norm(ctr_scene))  # 相机→场景质心（观测）
+        print(f"[CENTROID] cam->model-centroid = {dist_model:.4f} m, "
+              f"cam->scene-centroid = {dist_scene:.4f} m")
+    except Exception as e:
+        ctr_scene = ctr_model = None
+        print("[CENTROID] 计算失败：", e)
+
     # 保存
-    np.savez(save_npz, final_pose=best_pose, best_residual=best_res, best_index=best_idx)
+    np.savez(save_npz, final_pose=best_pose, best_residual=best_res, best_index=best_idx, ctr_scene=ctr_scene, ctr_model=ctr_model)
 
     # 可视化（仅最优）
     if show:
         model_aligned = transform_cloud(model_dn, best_pose)
         show_two_clouds(scene_dn, model_aligned, title=f"PPF+ICP 最优 #{best_idx} (res={best_res:.4g})")
+
+    if show and (ctr_scene is not None) and (ctr_model is not None):
+        show_with_centroids(scene_dn, model_aligned,
+                            ctr_scene=ctr_scene, ctr_model=ctr_model,
+                            title="Overlap centroids (green=scene, yellow=model)")
+
+    # # ===== 单独显示模型和场景（不叠加） =====
+    # show_separate_clouds(scene_dn, model_aligned,
+    #                      ctr_scene=ctr_scene, ctr_model=ctr_model)
 
 
 if __name__ == "__main__":

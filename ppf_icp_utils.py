@@ -7,6 +7,7 @@ ppf_icp_utils.py
 import numpy as np
 import open3d as o3d
 import cv2 as cv
+from scipy.spatial import cKDTree
 
 _EPS = 1e-12
 
@@ -288,3 +289,127 @@ def show_two_clouds(scene_pc: o3d.geometry.PointCloud,
     scene_pc.paint_uniform_color([0.0, 0.6, 1.0])
     model_pc_aligned.paint_uniform_color([1.0, 0.2, 0.2])
     o3d.visualization.draw_geometries([scene_pc, model_pc_aligned], window_name=title)
+
+
+
+def overlap_centroids_kdtree(model_xyz: np.ndarray,
+                             scene_xyz: np.ndarray,
+                             pose_4x4: np.ndarray,
+                             radius: float,
+                             min_nn: int = 3,
+                             mutual_check: bool = False,
+                             return_indices: bool = False):
+    """
+    低内存/高效率：KDTree 半径检索 + 累加统计，得到重叠区域的质心。
+    - model_xyz: (M,3) 模型点（未变换）
+    - scene_xyz: (N,3) 场景点
+    - pose_4x4 : (4,4) 最终位姿（把模型变到相机/场景坐标系）
+    - radius   : 半径阈值（建议 2~3*voxel_scene）
+    - min_nn   : 至少多少邻居算作“重叠”
+    - mutual_check: 是否做互为邻居检查（更稳但更慢）
+    - return_indices: True 则返回参与重叠的索引
+    """
+    M = model_xyz.astype(np.float32, copy=False)
+    S = scene_xyz.astype(np.float32, copy=False)
+
+    # 变换后的模型点（落到相机/场景坐标）
+    R = pose_4x4[:3, :3].astype(np.float32)
+    t = pose_4x4[:3, 3].astype(np.float32)
+    M_tf = (M @ R.T) + t  # (M,3)
+
+    tree_S = cKDTree(S)
+    if mutual_check:
+        tree_M = cKDTree(M_tf)
+
+    sum_scene = np.zeros(3, dtype=np.float64)
+    sum_model = np.zeros(3, dtype=np.float64)
+    cnt = 0
+
+    idx_model_kept = [] if return_indices else None
+    idx_scene_kept = [] if return_indices else None
+
+    for i, p in enumerate(M_tf):
+        neigh = tree_S.query_ball_point(p, r=radius)
+        if len(neigh) < min_nn:
+            continue
+
+        if mutual_check:
+            back = tree_M.query_ball_point(S[neigh], r=radius)
+            neigh = [j for j, blist in zip(neigh, back) if i in blist]
+            if len(neigh) < min_nn:
+                continue
+
+        ptsS = S[neigh]  # (k,3)
+        sum_scene += ptsS.sum(axis=0, dtype=np.float64)
+        sum_model += p.astype(np.float64) * len(neigh)
+        cnt += len(neigh)
+
+        if return_indices:
+            idx_model_kept.extend([i] * len(neigh))
+            idx_scene_kept.extend(neigh)
+
+    if cnt == 0:
+        raise RuntimeError("没有满足半径与最小邻居数的重叠点，调大 radius 或减小 min_nn 再试。")
+
+    ctr_scene = (sum_scene / cnt).astype(np.float32)
+    ctr_model = (sum_model / cnt).astype(np.float32)
+
+    out = (ctr_scene, ctr_model)
+    if return_indices:
+        out += (np.asarray(idx_scene_kept, dtype=np.int32),
+                np.asarray(idx_model_kept, dtype=np.int32))
+    return out
+
+
+def _make_sphere(center, radius=0.01, color=(1.0, 0.2, 0.2)):
+    """Open3D 画一个小球标记点。"""
+    sp = o3d.geometry.TriangleMesh.create_sphere(radius=radius)
+    sp.compute_vertex_normals()
+    sp.paint_uniform_color(color)
+    sp.translate(center.astype(float))
+    return sp
+
+
+def show_with_centroids(scene_pc: o3d.geometry.PointCloud,
+                        model_aligned: o3d.geometry.PointCloud,
+                        ctr_scene: np.ndarray,
+                        ctr_model: np.ndarray,
+                        title: str = "Overlap centroids"):
+    """可视化：场景+对齐后的模型 + 两个质心小球 + 连接线"""
+    g = []
+    g.append(scene_pc.paint_uniform_color([0.0, 0.6, 1.0]))
+    g.append(model_aligned.paint_uniform_color([1.0, 0.2, 0.2]))
+
+    sp_scene = _make_sphere(ctr_scene, radius=0.015, color=(0.0, 1.0, 0.0))
+    sp_model = _make_sphere(ctr_model, radius=0.015, color=(1.0, 0.8, 0.0))
+    g.extend([sp_scene, sp_model])
+
+    # 两个质心之间的连线（可选）
+    line = o3d.geometry.LineSet(
+        points=o3d.utility.Vector3dVector(np.vstack([ctr_scene, ctr_model])),
+        lines=o3d.utility.Vector2iVector(np.array([[0, 1]], dtype=np.int32)),
+    )
+    line.colors = o3d.utility.Vector3dVector(np.array([[1, 1, 1]], dtype=float))
+    g.append(line)
+
+    o3d.visualization.draw_geometries(g, window_name=title)
+
+
+def show_separate_clouds(scene_pc: o3d.geometry.PointCloud,
+                         model_pc: o3d.geometry.PointCloud,
+                         ctr_scene=None,
+                         ctr_model=None):
+    """
+    分别显示场景点云和模型点云（带可选质心）。
+    """
+    # 1️⃣ 显示场景
+    objs_scene = [scene_pc.paint_uniform_color([0.0, 0.6, 1.0])]
+    if ctr_scene is not None:
+        objs_scene.append(_make_sphere(ctr_scene, radius=0.015, color=(0.0, 1.0, 0.0)))
+    o3d.visualization.draw_geometries(objs_scene, window_name="Scene Cloud (blue + green centroid)")
+
+    # 2️⃣ 显示模型
+    objs_model = [model_pc.paint_uniform_color([1.0, 0.2, 0.2])]
+    if ctr_model is not None:
+        objs_model.append(_make_sphere(ctr_model, radius=0.015, color=(1.0, 0.8, 0.0)))
+    o3d.visualization.draw_geometries(objs_model, window_name="Model Cloud (red + yellow centroid)")
