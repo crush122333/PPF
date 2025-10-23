@@ -87,7 +87,7 @@ def main(model_path=MODEL_PATH, scene_path=SCENE_PATH, show=True, save_npz="ppf_
     # 法向一致化（k 近邻，与 MATLAB 等价） 后面是场景点云和模型点云的朝向一致化,法向在一个方向
     model_dn = estimate_normals_consistent_knn(model_dn, kn_m)
     scene_dn = estimate_normals_consistent_knn(scene_dn, kn_s)
-    model_dn, scene_dn = unify_normals_orientation(model_dn, scene_dn)
+    model_dn, scene_dn = unify_normals_orientation(model_dn, scene_dn)      #统一朝向
 
     # 构造 Nx6（Patch PCA+曲率筛选）
     model_ppf = to_ppf_array_patch(model_dn, PATCH_RADIUS_M, PATCH_MIN_PTS,
@@ -99,40 +99,33 @@ def main(model_path=MODEL_PATH, scene_path=SCENE_PATH, show=True, save_npz="ppf_
         raise RuntimeError("PPF arrays 为空（patch 过滤后无点）。请调小 curvature_min/增大 patch_radius。")
 
     # PPF 训练+匹配
-    det = cv.ppf_match_3d.PPF3DDetector(PPF_REL_SAMP_STEP, PPF_REL_DIST_STEP, int(PPF_NUM_ANGLES))
-    det.trainModel(model_ppf.astype(np.float32))
-    py_res = det.match(scene_ppf.astype(np.float32))
+    det = cv.ppf_match_3d.PPF3DDetector(PPF_REL_SAMP_STEP, PPF_REL_DIST_STEP, int(PPF_NUM_ANGLES))     # 先设置PPF的参数
+    det.trainModel(model_ppf.astype(np.float32))                                                       # 先对模型的点数进行训练
+    py_res = det.match(scene_ppf.astype(np.float32))                                                   # 在对场景的点云进行一个匹配
 
-    debug_get_props(py_res)
-    nC, poses, votes, ppf_residuals = extract_candidates(py_res)
+    debug_get_props(py_res)                                                                            # 对训练后得到的返回值进行解析
+    nC, poses, votes, ppf_residuals = extract_candidates(py_res)                                       # 提取训练的结果，投票数，残差以及位姿
     print(f"[PPF] candidates: {nC}")
     if nC == 0:
         raise RuntimeError("No PPF matches found.")
 
     # 候选筛选
-    poses_f   = poses
-    votes_f   = votes
-    ppf_res_f = ppf_residuals
+    poses_f   = poses                                                                         # 位姿矩阵
+    votes_f   = votes                                                                         # PPF投票数
+    ppf_res_f = ppf_residuals                                                                 # PPF粗匹配的残差
 
-    if SELECT_MODE == "votes":
-        order = np.argsort(-votes_f)    #本身是升序，- 号变成降序排列
-        K = min(TOPK_VOTES, len(order))
-        sel = order[:K]
-    elif SELECT_MODE == "residual":
-        order = np.argsort(np.nan_to_num(ppf_res_f, nan=np.inf))
-        K = min(TOPK_RESID, len(order))
-        sel = order[:K]
-    else:  # hybrid
-        ordV = np.argsort(-votes_f)
-        H = min(TOPK_VOTES, len(ordV))
-        pool = ordV[:H]
-        ordR = np.argsort(np.nan_to_num(ppf_res_f[pool], nan=np.inf))
-        K = min(TOPK_RESID, len(ordR))
-        sel = pool[ordR[:K]]
+    # 按投票数降序排列（np.argsort 默认升序，加负号即可降序）
+    order = np.argsort(-votes_f)
 
-    poses_sel = [poses_f[i] for i in sel]
-    votes_sel = votes_f[sel]
-    print(f"[SELECT] {SELECT_MODE} → {len(poses_sel)} candidates into ICP")
+    # 取前 K 个（TOPK_VOTES 是保留的候选数量，比如30）
+    K = min(TOPK_VOTES, len(order))
+    sel = order[:K]                                                                           # sel作为索引号进行筛选 排序
+
+    # 选出对应的位姿和投票数
+    poses_sel = [poses_f[i] for i in sel]  # poses 是 list
+    votes_sel = votes_f[sel]  # votes 是 ndarray
+
+    print(f"[SELECT] by votes → {len(poses_sel)} candidates into ICP")
 
     # ICP 循环 + 自动姿态修正
     best_pose, best_res, best_idx, logs = run_icp_for_candidates(

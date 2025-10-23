@@ -14,15 +14,15 @@ _EPS = 1e-12
 
 # ---------- 法向估计 / 一致化 ----------
 def estimate_normals_consistent_knn(pcd: o3d.geometry.PointCloud, k: int) -> o3d.geometry.PointCloud:
-    """k 近邻 PCA 法向 + 统一朝向（相对全局中心的外侧），与 MATLAB 等价"""
+    """k 近邻 PCA 法向 + 统一朝向（相对全局中心的外侧"""
     if len(pcd.points) == 0:
         return pcd
-    pcd.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamKNN(knn=max(3, int(k))))         #计算每个领域点的法向 kdtree领域检索
+    pcd.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamKNN(knn=max(3, int(k))))         #计算每个领域点的法向 kdtree（二分法）领域检索
     xyz = np.asarray(pcd.points)
     ctr = xyz.mean(axis=0)                                                                           #计算均值中心点，就是点云的质心 axis=0对列取平均，就是每个坐标（x,y,z）
     nrm = np.asarray(pcd.normals)
     v   = xyz - ctr                                                                                  #点云三维坐标指向质心的向量
-    mask = (np.sum(nrm * v, axis=1) > 0)                                                             #判断法向相反的点
+    mask = (np.sum(nrm * v, axis=1) > 0)                                                             #判断法向相反的点  axis=1表示列方向的求和 就是判断点乘的结果正负
     nrm[mask] *= -1.0                                                                                #法向进行翻转
     pcd.normals = o3d.utility.Vector3dVector(nrm)
     return pcd
@@ -33,12 +33,12 @@ def unify_normals_orientation(model_pcd: o3d.geometry.PointCloud,
     统一模型和场景点云的法向朝向方向（使整体平均法向一致）
     原理：比较平均法向方向，如果夹角>90°则翻转其中之一
     """
-    n_model = np.mean(np.asarray(model_pcd.normals), axis=0)
+    n_model = np.mean(np.asarray(model_pcd.normals), axis=0)    #按列对点云的x,y,z三个方向的法向取一个平均 可以看出整体的朝向
     n_scene = np.mean(np.asarray(scene_pcd.normals), axis=0)
-    n_model /= (np.linalg.norm(n_model) + _EPS)
+    n_model /= (np.linalg.norm(n_model) + _EPS)                 # 把平均法向量归一化（变成单位向量）
     n_scene /= (np.linalg.norm(n_scene) + _EPS)
 
-    if np.dot(n_model, n_scene) < 0:  # 如果反向
+    if np.dot(n_model, n_scene) < 0:                            # 如果反向。对两个单位向量点乘，同向 >0 ,反向 <0
         scene_pcd.normals = o3d.utility.Vector3dVector(-np.asarray(scene_pcd.normals))
         print("[INFO] flipped scene normals for consistency")
 
@@ -48,16 +48,16 @@ def unify_normals_orientation(model_pcd: o3d.geometry.PointCloud,
 def _curvature_from_cov(P: np.ndarray):
     if P.shape[0] < 3:                                                                              #邻域点数少于 3 个无法做 3D PCA/协方差分解，直接返回空结果
         return None, None, None
-    c = P.mean(axis=0)                                                                              #把所有点移到以质心为原点的坐标系（中心化），后面算协方差要用中心化数据
-    Q = P - c
-    C = (Q.T @ Q) / max(1, P.shape[0] - 1)
-    vals, vecs = np.linalg.eigh(C)
+    c = P.mean(axis=0)                                                                              #邻居点集的质心
+    Q = P - c                                                                                       #把所有点移到以质心为原点的坐标系（中心化），后面算协方差要用中心化数据
+    C = (Q.T @ Q) / max(1, P.shape[0] - 1)                                                          #协方差的计算
+    vals, vecs = np.linalg.eigh(C)                                                                  # 获取特征向量以及特征值
     order = np.argsort(vals)
     vals = vals[order]
-    vecs = vecs[:, order]
-    n = vecs[:, 0]
-    kappa = vals[0] / max(_EPS, vals.sum())
-    return n, kappa, c
+    vecs = vecs[:, order]                                                                           # vals 表示特征值    VESC表示特征向量
+    n = vecs[:, 0]                                                                                  # 法向量：PCA 中最小特征值的特征向量就是“变化最小”的方向，即局部平面的法向（单位长度）
+    kappa = vals[0] / max(_EPS, vals.sum())                                                         # 曲率 k=lmin /(l0+l1+l2)
+    return n, kappa, c                                                                              # 单位法向 n、曲率 kappa、邻域质心 c
 
 
 def to_ppf_array_patch(pcd: o3d.geometry.PointCloud,
@@ -70,38 +70,39 @@ def to_ppf_array_patch(pcd: o3d.geometry.PointCloud,
         return np.zeros((0, 6), np.float32)
     ctr_all = xyz_all.mean(axis=0)
 
-    kdt = o3d.geometry.KDTreeFlann(pcd)
+    kdt = o3d.geometry.KDTreeFlann(pcd)                                 # 点云创建KDTree
     keep = []
-    step = max(1, int(stride))
+    step = max(1, int(stride))                                          # 抽样的步长，采样提速
     for idx in range(0, len(xyz_all), step):
         p = xyz_all[idx]
-        k, nbr_idx, _ = kdt.search_radius_vector_3d(p, float(radius))
-        if k < min_pts:
+        k, nbr_idx, _ = kdt.search_radius_vector_3d(p, float(radius))   # 半径查询： 找P半径 r内的点邻居
+        if k < min_pts:                                                 # 邻居点太少
             continue
-        Pn = xyz_all[np.asarray(nbr_idx, dtype=int)]
-        n, kappa, c = _curvature_from_cov(Pn)
+        Pn = xyz_all[np.asarray(nbr_idx, dtype=int)]                   # 邻居点的坐标 放在Pn中
+        n, kappa, c = _curvature_from_cov(Pn)                          # 对其中领域点进行协方差获取法向量   单位法向 n、曲率 kappa、邻域质心 c
         if n is None:
             continue
-        if np.dot(n, (c - ctr_all)) > 0:
+        if np.dot(n, (c - ctr_all)) > 0:                               # 当前点与质心点的法向的一致化
             n = -n
-        if not (curv_min <= kappa <= curv_max):
+        if not (curv_min <= kappa <= curv_max):                        # 设置曲率的阈值
             continue
-        n = n / max(_EPS, np.linalg.norm(n))
+        n = n / max(_EPS, np.linalg.norm(n))                           # 单位化法向，避免数值不稳定
         keep.append(np.hstack([c, n]))
 
-    A = np.array(keep, dtype=np.float32) if keep else np.zeros((0, 6), np.float32)
+    A = np.array(keep, dtype=np.float32) if keep else np.zeros((0, 6), np.float32)    #keep 表示的是筛选后的 [(x,y,z,nx,ny,nz)] .
 
     # 可选体素合并
     if voxel_merge and len(A) > 0:
         pc_patch = o3d.geometry.PointCloud()
         pc_patch.points  = o3d.utility.Vector3dVector(A[:, :3])
         pc_patch.normals = o3d.utility.Vector3dVector(A[:, 3:])
-        pc_patch = pc_patch.voxel_down_sample(voxel_size=float(voxel_merge))
+        pc_patch = pc_patch.voxel_down_sample(voxel_size=float(voxel_merge))                       #在进行进一步的体素聚类采样后，体素类的所有点->取了一个几何中心 不会处理法向的数据，因此整体来说 points减少了
         # voxel_down_sample 可能丢法向：最近邻回填
+        #""" 在上述进行聚类采样的时候，法向和点云的数量不匹配，因此就需要把新点的索引号去寻找之前的法向
         if len(pc_patch.normals) != len(pc_patch.points):
             from sklearn.neighbors import NearestNeighbors
-            nbr = NearestNeighbors(n_neighbors=1).fit(A[:, :3])
-            idx = nbr.kneighbors(np.asarray(pc_patch.points), return_distance=False).ravel()
+            nbr = NearestNeighbors(n_neighbors=1).fit(A[:, :3])                                   #这一行在构建一个“旧点云 A” 的 KDTree 模型，用于后面查找每个新点的最近邻
+            idx = nbr.kneighbors(np.asarray(pc_patch.points), return_distance=False).ravel()      # 1.计算新点云中每个点在旧点云中最近的邻居索引  2 return_distance=False 表示只返回索引，不返回距离返  3.回结果 idx 的形状是 (M, 1)（二维）
             nrm = A[idx, 3:]
             pc_patch.normals = o3d.utility.Vector3dVector(nrm)
         A = np.hstack([np.asarray(pc_patch.points), np.asarray(pc_patch.normals)]).astype(np.float32)
@@ -179,9 +180,8 @@ def _median_nn_dist(points: np.ndarray, scene_xyz: np.ndarray) -> float:
     """
     计算每个 points 点到 scene_xyz 的 1-NN 距离的中位数（更稳健），
     使用双向分块方式避免 O(B*N) 内存爆炸。
+    中位数作为匹配的误差
     """
-    import numpy as np
-
     # ---- 1. 输入检查 ----
     P = np.asarray(points, dtype=np.float32)
     S = np.asarray(scene_xyz, dtype=np.float32)
@@ -197,17 +197,17 @@ def _median_nn_dist(points: np.ndarray, scene_xyz: np.ndarray) -> float:
 
     # ---- 2. 分块配置 ----
     pb = 2048     # 模型块大小
-    sb = 65536    # 场景块大小（每次处理6万多点）
+    sb = 65536    # 场景块大小（每次处理6万多点）  分块处理是为了减少点之间的运算
     mins = np.full(P.shape[0], np.inf, dtype=np.float32)
 
     # ---- 3. 双重分块计算 1-NN 距离 ----
     for i in range(0, P.shape[0], pb):
-        Pi = P[i:i+pb]
+        Pi = P[i:i+pb]                                 # 模型点（pb,3）
         min_i = np.full(Pi.shape[0], np.inf, dtype=np.float32)
         for j in range(0, S.shape[0], sb):
-            Sj = S[j:j+sb]
+            Sj = S[j:j+sb]                             # 场景点（sb, 3）
             diff = Pi[:, None, :] - Sj[None, :, :]     # (pb, sb, 3)
-            d2 = np.einsum('bij,bij->bi', diff, diff)  # (pb, sb)
+            d2 = np.einsum('bij,bij->bi', diff, diff)  # (pb, sb)  每个差向量的平方和
             min_i = np.minimum(min_i, d2.min(axis=1))  # 每个点的最小距离平方
         mins[i:i+pb] = np.sqrt(min_i)                  # 存回全局最小距离
 
@@ -221,15 +221,15 @@ def _median_nn_dist(points: np.ndarray, scene_xyz: np.ndarray) -> float:
 
 
 def _try_pose_variants(pose_in: np.ndarray, model_xyz: np.ndarray, scene_xyz: np.ndarray):
-    """验证单一姿态的ICP残差（不再尝试镜像翻转）"""
+    """验证单一姿态的ICP残差（不再尝试镜像翻转）,作用是：给定一个位姿（旋转 + 平移），把模型点云按这个位姿变换到场景坐标系下，然后计算变换后的模型点与场景点之间的距离残差（通常取中位数）"""
     R0 = pose_in[:3, :3].astype(np.float64, copy=True)
     t0 = pose_in[:3, 3].astype(np.float64, copy=True)
 
-    M = np.asarray(model_xyz, dtype=np.float64)
-    S = np.asarray(scene_xyz, dtype=np.float64)
+    M = np.asarray(model_xyz, dtype=np.float64)           # 模型的点云数据
+    S = np.asarray(scene_xyz, dtype=np.float64)           # S表示场景点云
 
-    Mtf = (M @ R0.T) + t0
-    med = _median_nn_dist(Mtf, S)
+    Mtf = (M @ R0.T) + t0                                 # 模型点云经过姿态变换后的坐标
+    med = _median_nn_dist(Mtf, S)                         # 计算变化后的误差
 
     T = np.eye(4, dtype=np.float32)
     T[:3, :3] = R0.astype(np.float32)
@@ -248,23 +248,22 @@ def run_icp_for_candidates(model_xyz: np.ndarray,
     best_index = -1                                                 # 最佳候选点的索引号
     all_logs = []                                                   # 每个候选点的日志进行打印
 
-    M = model_xyz.astype(np.float32)
+    M = model_xyz.astype(np.float32)                                # 转成float32
     S = scene_xyz.astype(np.float32)
 
-    for i, (P, v) in enumerate(zip(poses, votes)):                 # zip 将 poses 与 votes 配对；enumerate 给出下标 i
+    for i, (P, v) in enumerate(zip(poses, votes)):                  # zip 将 poses 与 votes 配对；enumerate 给出下标 i
         init_pose = P.astype(np.float32)
         R = init_pose[:3, :3]
         t = init_pose[:3, 3]
         M_init = (M @ R.T) + t
 
-        out = icp.registerModelToScene(M_init.astype(np.float32), S.astype(np.float32))
+        out = icp.registerModelToScene(M_init.astype(np.float32), S.astype(np.float32))        #执行icp的精匹配
         icp_pose, _ = _parse_icp_output(out)
 
         cand1 = icp_pose @ init_pose                               # icp*init  先用PPF粗对齐获取位姿，现在就是icp得到微调，icp_pose @ init_pose代表粗匹配的基础上进行微调
-        _, res1 = _try_pose_variants(cand1, M, S)
+        _, res1 = _try_pose_variants(cand1, M, S)                  # 计算残差
         cand1_fix = cand1
-        print(f"  - cand #{i:02d}: votes={v}, icp_res={res1}, use=icp*init"
-)
+        print(f"  - cand #{i:02d}: votes={v}, icp_res={res1}, use=icp*init")
         all_logs.append((i, v, float(res1)))
 
         if np.isfinite(res1) and res1 < best_residual:
@@ -328,8 +327,8 @@ def overlap_centroids_kdtree(model_xyz: np.ndarray,
     idx_model_kept = [] if return_indices else None
     idx_scene_kept = [] if return_indices else None
 
-    for i, p in enumerate(M_tf):
-        neigh = tree_S.query_ball_point(p, r=radius)
+    for i, p in enumerate(M_tf):                          # 模型点云经过变换后 得到 M_tf
+        neigh = tree_S.query_ball_point(p, r=radius)      # 半径r内 找到所有场景点索引
         if len(neigh) < min_nn:
             continue
 
@@ -340,18 +339,18 @@ def overlap_centroids_kdtree(model_xyz: np.ndarray,
                 continue
 
         ptsS = S[neigh]  # (k,3)
-        sum_scene += ptsS.sum(axis=0, dtype=np.float64)
-        sum_model += p.astype(np.float64) * len(neigh)
-        cnt += len(neigh)
+        sum_scene += ptsS.sum(axis=0, dtype=np.float64)       # 累加求质心 找的是场景点云的点，因此tof相机采集的点云质量有关
+        sum_model += p.astype(np.float64) * len(neigh)        # 模型点p*邻居数进行累加  可以认为是 加权，邻居多的模型点权重大
+        cnt += len(neigh)                                     # 统计总的邻居数量
 
         if return_indices:
-            idx_model_kept.extend([i] * len(neigh))
+            idx_model_kept.extend([i] * len(neigh))           # 存储两个点云的一一对应关系
             idx_scene_kept.extend(neigh)
 
     if cnt == 0:
         raise RuntimeError("没有满足半径与最小邻居数的重叠点，调大 radius 或减小 min_nn 再试。")
 
-    ctr_scene = (sum_scene / cnt).astype(np.float32)
+    ctr_scene = (sum_scene / cnt).astype(np.float32)         # 计算质心并且返回
     ctr_model = (sum_model / cnt).astype(np.float32)
 
     out = (ctr_scene, ctr_model)
