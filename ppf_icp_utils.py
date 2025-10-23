@@ -8,6 +8,7 @@ import numpy as np
 import open3d as o3d
 import cv2 as cv
 from scipy.spatial import cKDTree
+from typing import Tuple, Union, Optional
 
 _EPS = 1e-12
 
@@ -290,28 +291,30 @@ def show_two_clouds(scene_pc: o3d.geometry.PointCloud,
     o3d.visualization.draw_geometries([scene_pc, model_pc_aligned], window_name=title)
 
 
-
+#---------计算质心的距离-------------
 def overlap_centroids_kdtree(model_xyz: np.ndarray,
                              scene_xyz: np.ndarray,
                              pose_4x4: np.ndarray,
                              radius: float,
                              min_nn: int = 3,
                              mutual_check: bool = False,
-                             return_indices: bool = False):
+                             return_indices: bool = False,
+                             unique_scene: bool = True
+                             ) -> Union[
+                                 Tuple[np.ndarray, np.ndarray],
+                                 Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]
+                             ]:
     """
-    低内存/高效率：KDTree 半径检索 + 累加统计，得到重叠区域的质心。
-    - model_xyz: (M,3) 模型点（未变换）
-    - scene_xyz: (N,3) 场景点
-    - pose_4x4 : (4,4) 最终位姿（把模型变到相机/场景坐标系）
-    - radius   : 半径阈值（建议 2~3*voxel_scene）
-    - min_nn   : 至少多少邻居算作“重叠”
-    - mutual_check: 是否做互为邻居检查（更稳但更慢）
-    - return_indices: True 则返回参与重叠的索引
+    用 KDTree 半径检索找到重叠区域，并计算质心。
+    - 模型质心：只对“有邻居”的模型点做普通平均（不按邻居数加权）。
+    - 场景质心：默认对命中的场景点“去重后平均”（unique_scene=True）。
+      如果 unique_scene=False，则对所有邻居点做重复累计（和之前类似）。
     """
+
     M = model_xyz.astype(np.float32, copy=False)
     S = scene_xyz.astype(np.float32, copy=False)
 
-    # 变换后的模型点（落到相机/场景坐标）
+    # 将模型点变换到相机/场景坐标
     R = pose_4x4[:3, :3].astype(np.float32)
     t = pose_4x4[:3, 3].astype(np.float32)
     M_tf = (M @ R.T) + t  # (M,3)
@@ -320,15 +323,24 @@ def overlap_centroids_kdtree(model_xyz: np.ndarray,
     if mutual_check:
         tree_M = cKDTree(M_tf)
 
-    sum_scene = np.zeros(3, dtype=np.float64)
+    # —— 模型质心（普通平均，不加权）——
     sum_model = np.zeros(3, dtype=np.float64)
-    cnt = 0
+    cnt_model = 0
 
+    # —— 场景质心（默认去重平均）——
+    if unique_scene:
+        scene_hit = set()  # 记录命中的场景点索引（去重）
+        # 如果需要把“参与平均的场景点”索引也返回，可用这个 set
+    else:
+        sum_scene = np.zeros(3, dtype=np.float64)
+        cnt_scene = 0
+
+    # 需要返回索引的话，这两个会塞入
     idx_model_kept = [] if return_indices else None
     idx_scene_kept = [] if return_indices else None
 
-    for i, p in enumerate(M_tf):                          # 模型点云经过变换后 得到 M_tf
-        neigh = tree_S.query_ball_point(p, r=radius)      # 半径r内 找到所有场景点索引
+    for i, p in enumerate(M_tf):
+        neigh = tree_S.query_ball_point(p, r=radius)
         if len(neigh) < min_nn:
             continue
 
@@ -338,26 +350,56 @@ def overlap_centroids_kdtree(model_xyz: np.ndarray,
             if len(neigh) < min_nn:
                 continue
 
-        ptsS = S[neigh]  # (k,3)
-        sum_scene += ptsS.sum(axis=0, dtype=np.float64)       # 累加求质心 找的是场景点云的点，因此tof相机采集的点云质量有关
-        sum_model += p.astype(np.float64) * len(neigh)        # 模型点p*邻居数进行累加  可以认为是 加权，邻居多的模型点权重大
-        cnt += len(neigh)                                     # 统计总的邻居数量
+        # —— 模型：该模型点“有效”，计入普通平均 ——
+        sum_model += p.astype(np.float64)
+        cnt_model += 1
+        if return_indices:
+            idx_model_kept.append(i)
+
+        # —— 场景：命中的场景点 ——
+        if unique_scene:
+            # 去重统计
+            scene_hit.update(neigh)
+        else:
+            # 重复累计（旧逻辑）
+            ptsS = S[neigh]  # (k,3)
+            sum_scene += ptsS.sum(axis=0, dtype=np.float64)
+            cnt_scene += len(neigh)
 
         if return_indices:
-            idx_model_kept.extend([i] * len(neigh))           # 存储两个点云的一一对应关系
+            # 注意：这里按“模型点重复记录邻居索引”，主要用于可视化连线；
+            # 如果你更想返回“去重后的场景索引”，可以后面把 scene_hit 转成数组返回。
             idx_scene_kept.extend(neigh)
 
-    if cnt == 0:
+    # —— 结果合成 ——
+    if cnt_model == 0:
         raise RuntimeError("没有满足半径与最小邻居数的重叠点，调大 radius 或减小 min_nn 再试。")
 
-    ctr_scene = (sum_scene / cnt).astype(np.float32)         # 计算质心并且返回
-    ctr_model = (sum_model / cnt).astype(np.float32)
+    # 模型质心：普通平均
+    ctr_model = (sum_model / cnt_model).astype(np.float32)
+
+    # 场景质心：去重平均（默认）或重复累计
+    if unique_scene:
+        if len(scene_hit) == 0:
+            raise RuntimeError("没有命中的场景点（unique_scene=True）。请调参。")
+        hit_idx = np.fromiter(scene_hit, dtype=np.int32)
+        ctr_scene = S[hit_idx].mean(axis=0).astype(np.float32)
+        scene_indices_for_return = hit_idx  # 去重后的场景索引
+    else:
+        if cnt_scene == 0:
+            raise RuntimeError("没有命中的场景点（unique_scene=False）。请调参。")
+        ctr_scene = (sum_scene / cnt_scene).astype(np.float32)
+        scene_indices_for_return = np.asarray(idx_scene_kept, dtype=np.int32) if return_indices else None
 
     out = (ctr_scene, ctr_model)
     if return_indices:
-        out += (np.asarray(idx_scene_kept, dtype=np.int32),
-                np.asarray(idx_model_kept, dtype=np.int32))
+        # 模型索引是“有效模型点”的索引（去重），场景索引按 unique_scene 选择去重/不去重
+        out += (
+            scene_indices_for_return,
+            np.asarray(idx_model_kept, dtype=np.int32),
+        )
     return out
+
 
 
 def _make_sphere(center, radius=0.01, color=(1.0, 0.2, 0.2)):

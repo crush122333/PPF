@@ -136,16 +136,19 @@ def main(model_path=MODEL_PATH, scene_path=SCENE_PATH, show=True, save_npz="ppf_
 
     print(f"\n[FINAL POSE] residual = {best_res} (from candidate #{best_idx})\n{best_pose}")
 
-    # ===== 计算重叠区域质心（模型→场景坐标后，与场景半径匹配）=====
+    # ===== 计算重叠区域质心，直接对重叠的模型点云进行质心的计算=====
     try:
         ctr_scene, ctr_model = overlap_centroids_kdtree(
-            model_xyz=model_ppf[:, :3],           # 未变换模型点（N×3）
-            scene_xyz=scene_ppf[:, :3],           # 场景点（N×3）
-            pose_4x4=best_pose,                   # 最优位姿（把模型变到相机/场景坐标）
-            radius=3.0 * voxel_scene,             # 半径建议 2~3 倍体素
-            min_nn=3,                             # 至少 3 个邻居才算重叠
-            mutual_check=False                    # 需要更稳时可开 True（更慢）
+            model_xyz=model_ppf[:, :3],
+            scene_xyz=scene_ppf[:, :3],
+            pose_4x4=best_pose,
+            radius=3.0 * voxel_scene,
+            min_nn=3,
+            mutual_check=False,
+            unique_scene=True,  # 场景点去重后平均（推荐）
+            # return_indices=True,      # 如需拿到索引就加上
         )
+
         dist_model = float(np.linalg.norm(ctr_model))  # 相机→模型质心（理论）
         dist_scene = float(np.linalg.norm(ctr_scene))  # 相机→场景质心（观测）
         print(f"[CENTROID] cam->model-centroid = {dist_model:.4f} m, "
