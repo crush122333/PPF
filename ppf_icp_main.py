@@ -23,11 +23,18 @@ from ppf_icp_utils import (
 
 )
 
-# =============== 路径 ===============
-MODEL_PATH = "cuboid_model.ply"
-SCENE_PATH = "cube_scene_crop.ply"
+from acquisition_tof import grab_scene_pointcloud_once_network
 
-# =============== 参数（与 MATLAB 对齐） ===============
+# ===== 相机与DLL =====
+IP  = "10.1.1.104"   # 相机 IP
+MODEL_PATH = "cuboid_model.ply"
+
+# 相机内参（示例，替换成你的标定值）
+W, H = 320, 240
+fx = fy = 227.6
+cx, cy = (W-1)/2, (H-1)/2
+
+# =============== 参数 ===============
 voxel_model = 0.01
 voxel_scene = 0.01
 
@@ -64,29 +71,29 @@ SELECT_MODE  = "votes"   # "votes" | "residual" | "hybrid"
 TOPK_VOTES   = 30
 TOPK_RESID   = 15
 
+# =============== 路径 ===============
+MODEL_PATH = "cuboid_model.ply"
+# SCENE_PATH = "cube_scene_crop.ply"
 
-def main(model_path=MODEL_PATH, scene_path=SCENE_PATH, show=True, save_npz="ppf_icp_result.npz"):
+def main():
     print("[OpenCV] version:", cv.__version__)
 
-    # 读点云
-    model_pc = o3d.io.read_point_cloud(model_path)
-    scene_pc = o3d.io.read_point_cloud(scene_path)
-    print(f"[Read] model: {len(model_pc.points)} pts, scene: {len(scene_pc.points)} pts")
-
-    # 下采样
+    # 模型：读→下采样→去噪→法向
+    model_pc = o3d.io.read_point_cloud(MODEL_PATH)
     model_ds = model_pc.voxel_down_sample(voxel_model)
-    scene_ds = scene_pc.voxel_down_sample(voxel_scene)
-    print(f"[Voxel] model: {len(model_pc.points)} -> {len(model_ds.points)}, "
-          f"scene: {len(scene_pc.points)} -> {len(scene_ds.points)}")
-
-    # 去噪（与 MATLAB 对齐：更宽松）
     model_dn = model_ds.remove_statistical_outlier(nb_neighbors=20, std_ratio=2.0)[0]
-    scene_dn = scene_ds.remove_statistical_outlier(nb_neighbors=30, std_ratio=2.0)[0]
-    print(f"[Denoise] model: {len(model_dn.points)}, scene: {len(scene_dn.points)}")
-
-    # 法向一致化（k 近邻，与 MATLAB 等价） 后面是场景点云和模型点云的朝向一致化,法向在一个方向
     model_dn = estimate_normals_consistent_knn(model_dn, kn_m)
+
+    # 采集一帧（或多帧中值）→ 点云（米）
+    # scene_xyz = grab_scene_pointcloud_once(dll_path=DLL, ip=IP, port=PORT, fx=fx, fy=fy, cx=cx, cy=cy, frames=3, median_filter=True)
+    scene_xyz = grab_scene_pointcloud_once_network(IP)  # 单帧
+
+    scene_pc = o3d.geometry.PointCloud(o3d.utility.Vector3dVector(scene_xyz))
+    scene_ds = scene_pc.voxel_down_sample(voxel_scene)
+    scene_dn = scene_ds.remove_statistical_outlier(nb_neighbors=30, std_ratio=2.0)[0]
     scene_dn = estimate_normals_consistent_knn(scene_dn, kn_s)
+
+    # 法向朝向统一（模型和场景）
     model_dn, scene_dn = unify_normals_orientation(model_dn, scene_dn)      #统一朝向
 
     # 构造 Nx6（Patch PCA+曲率筛选）
