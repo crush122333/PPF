@@ -454,3 +454,106 @@ def show_separate_clouds(scene_pc: o3d.geometry.PointCloud,
     if ctr_model is not None:
         objs_model.append(_make_sphere(ctr_model, radius=0.015, color=(1.0, 0.8, 0.0)))
     o3d.visualization.draw_geometries(objs_model, window_name="Model Cloud (red + yellow centroid)")
+
+
+#------- 进入icp前，对一些候选点进行筛选 -------
+def _quick_score(model_xyz: np.ndarray,
+                 scene_xyz: np.ndarray,
+                 pose4x4: np.ndarray,
+                 radius: float | None = None,
+                 alpha: float = 0.02,
+                 beta: float = 0.0,
+                 model_normals: np.ndarray | None = None,
+                 scene_normals: np.ndarray | None = None) -> float:
+    """
+    给一个候选位姿做“廉价评分”：越小越好。
+    组成：median 1-NN 距离（主项） - α*重叠率 - β*法向一致性
+    """
+    R = pose4x4[:3, :3].astype(np.float64)
+    t = pose4x4[:3, 3].astype(np.float64)
+    Mtf = (model_xyz @ R.T) + t
+
+    # 主项：中位数 1-NN 距离（你项目里已有的方法）
+    med = _median_nn_dist(Mtf, scene_xyz)
+
+    # 可选：重叠率（Mtf 中“半径内命中”点的占比）
+    overlap = 0.0
+    if radius is not None and np.isfinite(radius) and radius > 0:
+        hit = cKDTree(scene_xyz).query_ball_point(Mtf, r=float(radius))     #就是用于KDtree半径查询，看Mtf里面有多少距离场景点
+        overlap = sum(1 for h in hit if len(h) > 0) / max(len(Mtf), 1)
+
+    # 可选：法向一致性（均值 cosθ）
+    normal_sim = 0.0
+    if (model_normals is not None) and (scene_normals is not None):     # 判断输入是否有法向数据
+        mn_tf = (model_normals @ R.T)                                   # 将模型法向通过旋转矩阵变换到场景坐标系   记住是选装矩阵，不需要平移
+        # 简化做法：对每个模型法向在场景里找最近邻法向（同一 1-NN）
+        # 为省时，这里直接用点对应的法向平均（你也可换成 knn 对应）
+        n = min(len(mn_tf), len(scene_normals))                         # 对齐数量，保证计算时，两个法向量之间对应
+        if n > 0:
+            cs = np.einsum('ij,ij->i', mn_tf[:n], scene_normals[:n])    # 计算每一对法向的夹角
+            # 计算所有法向夹角的平均cos值，并限制范围
+            # 越接近1，平行，法向越好
+            normal_sim = float(np.clip(np.mean(cs), -1.0, 1.0))
+
+    return float(med - alpha * overlap - beta * normal_sim)             # 计算分数
+
+
+def _pose_key(pose4x4: np.ndarray,
+              t_cell: float = 0.02,
+              r_cell_deg: float = 5.0) -> tuple:
+    """
+    位姿去重键：把平移/旋转量化到网格，合并相近候选，避免重复 ICP。
+    """
+    R = pose4x4[:3, :3].astype(np.float64)
+    t = pose4x4[:3, 3].astype(np.float64)
+    rvec, _ = cv.Rodrigues(R)
+    ang_deg = float(np.linalg.norm(rvec) * 180.0 / np.pi)
+    return (tuple(np.round(t / t_cell)), int(round(ang_deg / r_cell_deg)))
+
+
+def select_candidates_for_icp(model_xyz: np.ndarray,
+                              scene_xyz: np.ndarray,
+                              poses: list[np.ndarray],
+                              votes: np.ndarray,
+                              voxel_scene: float,
+                              pool_max: int = 80,      # 初筛池大小（按票数取足量，保证召回）
+                              K_icp: int = 12,         # 真正送入 ICP 的数量
+                              alpha: float = 0.02,     # 重叠率权重
+                              beta: float = 0.0,       # 法向一致性权重（有可靠法向再开）
+                              model_normals: np.ndarray | None = None,
+                              scene_normals: np.ndarray | None = None) -> tuple[list[np.ndarray], np.ndarray, list[int]]:
+    """
+    返回：poses_sel(list of 4x4), votes_sel(ndarray), sel_idx(list 原始索引)
+    """
+    # 1) 先按票数取一个较大的“初筛池”，保证召回
+    order = np.argsort(-votes)
+    order = order[:min(pool_max, len(order))]
+
+    # 2) 候选去重（NMS/网格合并）
+    best_idx_by_key: dict[tuple, int] = {}
+    for i in order:
+        k = _pose_key(poses[i])
+        if k not in best_idx_by_key:
+            best_idx_by_key[k] = i
+        else:
+            # 保留票数更高的那个（或后面会用 quick_score 决定也行）
+            if votes[i] > votes[best_idx_by_key[k]]:
+                best_idx_by_key[k] = i
+    pool = list(best_idx_by_key.values())
+
+    # 3) 快速几何评分（中位数 1-NN + 可选重叠率/法向一致性）
+    radius = 3.0 * voxel_scene
+    scored = []
+    for i in pool:
+        sc = _quick_score(model_xyz, scene_xyz, poses[i],
+                          radius=radius, alpha=alpha, beta=beta,
+                          model_normals=model_normals, scene_normals=scene_normals)
+        scored.append((sc, i))
+
+    # 4) 按分数升序，取前 K_icp 个进入 ICP
+    scored.sort(key=lambda x: x[0])
+    take = [i for _, i in scored[:min(K_icp, len(scored))]]
+
+    poses_sel = [poses[i] for i in take]
+    votes_sel = votes[take]
+    return poses_sel, votes_sel, take

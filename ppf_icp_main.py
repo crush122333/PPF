@@ -20,7 +20,7 @@ from ppf_icp_utils import (
     overlap_centroids_kdtree,
     show_with_centroids,
     show_separate_clouds,
-
+    select_candidates_for_icp,
 )
 
 from acquisition_tof import grab_scene_pointcloud_once_network
@@ -52,7 +52,7 @@ PPF_REL_DIST_STEP = 0.05
 PPF_NUM_ANGLES    = 45
 
 # ICP 参数
-ICP_MAX_ITER  = 200
+ICP_MAX_ITER  = 100   #200
 ICP_TOL       = 1e-5
 ICP_REJ_SCALE = 2.0
 ICP_LEVELS    = 5
@@ -68,27 +68,28 @@ PATCH_VOXEL_MERGE= 0.0
 
 # 候选选择策略
 SELECT_MODE  = "votes"   # "votes" | "residual" | "hybrid"
-TOPK_VOTES   = 30
+TOPK_VOTES   = 20         # 30
 TOPK_RESID   = 15
 
 # =============== 路径 ===============
 MODEL_PATH = "cuboid_model.ply"
-# SCENE_PATH = "cube_scene_crop.ply"
+SCENE_PATH = "cube_scene_crop.ply"
 
-def main():
+def main( show=True,save_npz="ppf_icp_result.npz"):
     print("[OpenCV] version:", cv.__version__)
 
     # 模型：读→下采样→去噪→法向
     model_pc = o3d.io.read_point_cloud(MODEL_PATH)
     model_ds = model_pc.voxel_down_sample(voxel_model)
-    model_dn = model_ds.remove_statistical_outlier(nb_neighbors=20, std_ratio=2.0)[0]
-    model_dn = estimate_normals_consistent_knn(model_dn, kn_m)
+    model_dn = model_ds.remove_statistical_outlier(nb_neighbors=20, std_ratio=2.0)[0]     #统计滤波  高斯
+    model_dn = estimate_normals_consistent_knn(model_dn, kn_m)                            # 法向一致
 
     # 采集一帧（或多帧中值）→ 点云（米）
-    # scene_xyz = grab_scene_pointcloud_once(dll_path=DLL, ip=IP, port=PORT, fx=fx, fy=fy, cx=cx, cy=cy, frames=3, median_filter=True)
-    scene_xyz = grab_scene_pointcloud_once_network(IP)  # 单帧
+    scene_xyz = SCENE_PATH
+    scene_pc = o3d.io.read_point_cloud(scene_xyz)
+    # scene_xyz = grab_scene_pointcloud_once_network(IP)  # 单帧
+    # scene_pc = o3d.geometry.PointCloud(o3d.utility.Vector3dVector(scene_xyz))
 
-    scene_pc = o3d.geometry.PointCloud(o3d.utility.Vector3dVector(scene_xyz))
     scene_ds = scene_pc.voxel_down_sample(voxel_scene)
     scene_dn = scene_ds.remove_statistical_outlier(nb_neighbors=30, std_ratio=2.0)[0]
     scene_dn = estimate_normals_consistent_knn(scene_dn, kn_s)
@@ -120,19 +121,36 @@ def main():
     poses_f   = poses                                                                         # 位姿矩阵
     votes_f   = votes                                                                         # PPF投票数
     ppf_res_f = ppf_residuals                                                                 # PPF粗匹配的残差
+    #
+    # # 按投票数降序排列（np.argsort 默认升序，加负号即可降序）
+    # order = np.argsort(-votes_f)
+    #
+    # # 取前 K 个（TOPK_VOTES 是保留的候选数量，比如30）
+    # K = min(TOPK_VOTES, len(order))
+    # sel = order[:K]                                                                           # sel作为索引号进行筛选 排序
+    #
+    # # 选出对应的位姿和投票数
+    # poses_sel = [poses_f[i] for i in sel]  # poses 是 list
+    # votes_sel = votes_f[sel]  # votes 是 ndarray
+    #
+    # print(f"[SELECT] by votes → {len(poses_sel)} candidates into ICP")
 
-    # 按投票数降序排列（np.argsort 默认升序，加负号即可降序）
-    order = np.argsort(-votes_f)
-
-    # 取前 K 个（TOPK_VOTES 是保留的候选数量，比如30）
-    K = min(TOPK_VOTES, len(order))
-    sel = order[:K]                                                                           # sel作为索引号进行筛选 排序
-
-    # 选出对应的位姿和投票数
-    poses_sel = [poses_f[i] for i in sel]  # poses 是 list
-    votes_sel = votes_f[sel]  # votes 是 ndarray
-
-    print(f"[SELECT] by votes → {len(poses_sel)} candidates into ICP")
+    # ===== 两段式候选筛选（先快速打分，再进 ICP） =====
+    poses_sel, votes_sel, sel_idx = select_candidates_for_icp(
+        model_xyz=model_ppf[:, :3],
+        scene_xyz=scene_ppf[:, :3],
+        poses=poses_f,
+        votes=votes_f,
+        voxel_scene=voxel_scene,
+        pool_max=80,  # 初筛池，按票数取80个（可调）
+        K_icp=10,  # 送入ICP的数量（推荐8~12）
+        alpha=0.02,  # 重叠率权重
+        beta=0.0,  # 如果法向可靠可设0.01~0.02
+        # 如你前面已做法向一致化，可取消注释传入
+        # model_normals=model_dn.normals,
+        # scene_normals=scene_dn.normals,
+    )
+    print(f"[SELECT] quick-score → {len(poses_sel)} candidates into ICP (from {len(votes_f)} PPF matches)")
 
     # ICP 循环 + 自动姿态修正
     best_pose, best_res, best_idx, logs = run_icp_for_candidates(
