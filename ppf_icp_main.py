@@ -23,10 +23,10 @@ from ppf_icp_utils import (
     select_candidates_for_icp,
 )
 
-from acquisition_tof import grab_scene_pointcloud_once_network
+from xt_pc_single import capture_scene_pointcloud
 
 # ===== 相机与DLL =====
-IP  = "10.1.1.104"   # 相机 IP
+IP  = "192.168.1.113"   # 相机 IP
 MODEL_PATH = "cuboid_model.ply"
 
 # 相机内参（示例，替换成你的标定值）
@@ -75,7 +75,7 @@ TOPK_RESID   = 15
 MODEL_PATH = "cuboid_model.ply"
 SCENE_PATH = "cube_scene_crop.ply"
 
-def main( show=True,save_npz="ppf_icp_result.npz"):
+def main(show=True, save_npz="ppf_icp_result.npz", scene_pc=None):
     print("[OpenCV] version:", cv.__version__)
 
     # 模型：读→下采样→去噪→法向
@@ -85,13 +85,22 @@ def main( show=True,save_npz="ppf_icp_result.npz"):
     model_dn = estimate_normals_consistent_knn(model_dn, kn_m)                            # 法向一致
 
     # 采集一帧（或多帧中值）→ 点云（米）
-    scene_xyz = SCENE_PATH
-    scene_pc = o3d.io.read_point_cloud(scene_xyz)
-    # scene_xyz = grab_scene_pointcloud_once_network(IP)  # 单帧
-    # scene_pc = o3d.geometry.PointCloud(o3d.utility.Vector3dVector(scene_xyz))
+    # scene_xyz = SCENE_PATH
+    # scene_pc = o3d.io.read_point_cloud(scene_xyz)
+    #画出来后还需要进行去平面以及删点
+    # 1) 采集一帧（返回 Nx4: x,y,z,intensity），已保存 ./xt_pointcloud_out/scene.pcd
+    scene_pts = capture_scene_pointcloud(ip="192.168.1.113",out_dir="./xt_pointcloud_out",max_dist=2.0,img_type=None, timeout_s=8.0)
+    # 2) 转为 Open3D 点云（才能用 voxel/downsample 等 API）
+    scene_xyz = scene_pts[:, :3].astype(np.float64)  # 只取 xyz
+    scene_pc = o3d.geometry.PointCloud()
+    scene_pc.points = o3d.utility.Vector3dVector(scene_xyz)
 
     scene_ds = scene_pc.voxel_down_sample(voxel_scene)
     scene_dn = scene_ds.remove_statistical_outlier(nb_neighbors=30, std_ratio=2.0)[0]
+    plane_model, inliers = scene_dn.segment_plane(distance_threshold=0.008, ransac_n=3, num_iterations=2000)
+    scene_nonplane = scene_dn.select_by_index(inliers, invert=True)
+    print("[Plane] model (a,b,c,d) =", plane_model)
+
     scene_dn = estimate_normals_consistent_knn(scene_dn, kn_s)
 
     # 法向朝向统一（模型和场景）

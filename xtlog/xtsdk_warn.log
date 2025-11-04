@@ -1,0 +1,537 @@
+[20251027-14-16-38 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251027-14-16-41 WARRING] XinTan::openTcpThread: error
+[20251027-14-16-44 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251027-14-16-44 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251027-14-16-44 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251027-14-16-46 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251027-14-16-46 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251027-15-17-42 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251027-15-17-45 WARRING] XinTan::openTcpThread: error
+[20251027-15-17-48 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251027-15-17-48 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251027-15-17-48 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251027-15-17-50 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251027-15-17-50 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251030-09-55-45 WARRING] XinTan::openTcpThread: error
+[20251030-09-55-46 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251030-09-55-51 WARRING] XinTan::openTcpThread: error
+[20251030-09-55-52 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251030-09-55-52 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251030-09-55-52 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251030-09-55-54 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251030-09-55-54 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251103-15-30-13 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251103-15-30-14 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251103-15-30-16 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251103-15-30-17 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251103-15-30-17 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251103-15-30-17 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251103-15-30-17 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251103-15-30-17 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251103-15-30-18 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251103-15-30-19 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251103-15-30-19 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251103-15-43-11 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251103-15-43-11 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251103-15-43-13 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251103-15-43-14 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251103-15-43-14 WARRING] XinTan::CommnunicationNet::transmitPackage: cmd wirte error
+[20251103-15-43-14 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251103-15-43-14 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251103-15-43-14 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251103-15-43-14 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251103-15-43-15 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251103-15-43-16 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251103-15-43-16 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-11-38 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-11-38 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-11-40 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-11-41 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-11-41 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-09-11-42 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-09-11-42 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-09-11-42 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-09-11-42 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-09-11-43 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-11-43 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-11-43 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-11-43 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-12-20 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-12-20 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-12-22 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-12-23 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-12-23 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-09-12-24 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-09-12-24 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-09-12-24 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-09-12-24 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-09-12-25 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-12-25 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-12-25 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-12-25 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-30-57 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-30-59 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-30-59 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-32-26 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-32-26 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-32-28 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-32-29 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-32-30 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-09-32-56 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-32-56 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-32-56 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-32-56 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-32-57 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-09-32-58 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-32-58 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-33-41 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-39-43 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-39-44 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-39-46 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-39-46 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-39-46 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-39-48 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-09-40-05 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-40-05 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-40-07 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-40-07 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-40-07 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-40-08 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-09-41-31 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-41-31 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-41-33 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-41-34 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-41-34 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-09-41-54 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-41-55 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-41-57 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-41-58 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-41-58 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-09-41-59 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-41-59 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-41-59 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-41-59 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-42-01 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-42-01 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-42-16 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-42-16 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-42-18 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-42-19 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-42-20 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-09-44-17 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-44-17 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-44-19 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-44-20 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-44-20 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-09-44-21 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-44-21 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-44-21 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-44-21 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-44-23 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-44-23 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-46-51 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-46-51 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-46-53 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-46-54 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-46-55 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-09-47-06 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-47-06 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-47-06 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-47-06 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-47-07 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-09-47-09 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-47-09 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-48-52 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-48-52 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-48-54 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-48-55 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-48-55 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-09-48-56 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-48-56 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-48-56 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-48-56 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-48-58 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-48-58 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-53-18 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-53-18 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-53-20 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-53-21 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-53-21 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-09-53-22 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-53-22 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-53-22 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-53-22 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-53-24 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-53-24 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-58-22 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-58-22 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-58-24 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-58-25 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-09-58-25 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-09-58-25 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-09-58-25 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-58-25 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-09-58-25 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-09-58-26 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-09-58-28 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-09-58-28 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-10-13-52 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-13-53 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-13-55 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-13-56 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-13-56 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-10-13-57 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-13-57 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-10-13-57 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-10-13-57 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-13-58 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-13-59 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-10-13-59 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-10-14-01 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-14-02 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-14-04 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-14-05 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-14-06 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-10-14-06 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-14-06 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-10-14-06 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-10-14-06 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-14-08 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-10-14-08 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-10-16-23 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-16-23 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-16-25 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-16-26 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-16-26 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-10-16-27 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-16-28 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-16-28 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-10-16-28 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-16-28 WARRING] XinTan::CommnunicationNet::udppacket: udp discard frame 1423
+[20251104-10-18-37 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-18-37 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-18-38 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-18-39 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-18-40 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-10-18-41 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-18-41 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-18-41 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-18-41 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-18-41 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-10-18-41 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-10-18-41 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-22-16 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-22-16 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-22-18 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-22-19 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-22-20 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-10-22-20 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-22-20 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-22-21 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-22-21 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-10-22-21 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-22-21 WARRING] XinTan::CommnunicationNet::udppacket: udp discard frame 1449
+[20251104-10-25-59 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-26-00 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-26-02 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-26-03 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-26-03 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-10-26-04 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-26-04 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-26-05 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-26-05 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-10-26-05 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-10-26-05 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-27-16 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-27-16 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-27-18 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-27-19 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-27-20 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-10-27-20 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-27-20 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-27-21 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-27-21 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-10-27-21 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-10-27-21 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-27-53 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-27-53 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-27-55 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-27-56 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-27-57 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-10-27-57 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-27-57 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-27-58 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-27-58 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-10-27-58 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-10-27-58 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-28-54 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-28-55 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-28-57 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-28-58 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-28-58 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-10-28-59 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-28-59 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-29-00 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-29-00 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-10-29-00 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-10-29-00 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-29-53 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-29-53 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-29-55 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-29-56 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-29-57 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-10-29-57 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-29-57 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-29-58 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-29-58 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-10-29-58 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-10-29-58 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-34-55 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-34-55 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-10-34-57 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-34-58 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-10-34-58 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-10-34-59 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-34-59 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-10-35-00 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-10-35-00 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-10-35-00 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-10-35-00 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-11-17-23 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-11-17-24 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-11-17-26 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-11-17-27 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-11-17-28 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-11-17-28 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-11-17-28 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-11-17-28 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-11-17-28 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-11-17-28 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-11-17-28 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-11-17-29 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-11-21-10 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-11-21-10 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-11-21-12 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-11-21-13 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-11-21-14 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-11-21-14 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-11-21-14 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-11-21-14 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-11-21-14 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-11-21-14 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-11-24-12 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-11-24-12 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-11-24-14 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-11-24-15 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-11-24-15 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-11-24-16 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-11-24-16 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-11-24-16 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-11-24-16 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-11-24-16 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-11-24-16 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-11-47-21 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-11-47-21 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-11-47-23 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-11-47-24 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-11-47-24 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-11-47-25 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-11-47-25 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-11-47-25 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-11-47-25 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-11-47-25 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-11-47-25 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-19-16 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-19-17 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-19-19 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-19-20 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-19-20 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-19-21 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-19-21 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-19-21 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-19-21 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-19-21 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-19-21 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-19-21 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-20-29 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-20-29 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-20-30 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-20-32 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-20-32 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-20-32 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-20-32 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-20-32 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-20-32 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-20-32 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-20-32 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-20-32 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-20-56 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-20-57 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-20-59 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-21-00 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-21-00 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-21-01 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-21-01 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-21-01 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-21-01 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-21-01 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-21-01 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-21-01 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-21-01 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-21-25 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-21-25 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-21-27 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-21-28 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-21-29 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-21-29 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-21-29 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-21-29 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-21-29 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-21-29 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-21-29 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-21-29 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-21-57 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-21-57 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-21-59 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-22-00 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-22-00 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-22-00 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-22-00 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-22-00 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-22-00 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-22-00 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-22-00 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-22-00 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-29-53 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-29-54 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-29-56 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-29-57 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-29-57 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-29-58 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-29-58 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-29-58 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-29-58 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-29-58 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-29-58 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-29-58 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-30-17 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-30-18 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-30-20 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-30-21 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-30-22 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-30-22 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-30-22 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-30-22 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-30-22 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-30-22 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-30-22 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-30-22 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-30-43 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-30-44 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-30-46 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-30-47 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-30-48 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-30-48 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-30-48 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-30-48 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-30-48 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-30-48 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-30-48 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-30-48 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-31-09 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-31-09 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-31-11 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-31-12 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-31-12 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-31-13 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-31-13 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-31-13 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-31-13 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-31-13 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-31-13 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-31-13 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-31-34 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-31-35 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-31-37 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-31-38 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-31-38 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-31-39 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-31-39 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-31-39 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-31-39 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-31-39 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-31-39 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-31-39 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-32-00 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-32-00 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-32-02 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-32-03 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-32-03 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-32-04 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-32-04 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-32-04 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-32-04 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-32-04 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-32-04 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-32-04 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-34-01 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-34-01 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-34-03 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-34-04 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-34-05 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-34-05 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-34-05 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-34-05 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-34-05 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-34-05 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-34-05 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-34-05 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-34-05 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-34-26 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-34-27 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-34-29 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-34-30 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-34-30 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-34-31 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-34-31 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-34-31 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-34-31 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-34-31 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-34-31 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-34-31 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-34-53 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-34-53 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-34-55 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-34-56 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-34-56 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-34-57 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-34-57 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-34-57 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-34-57 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-34-57 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-34-57 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-34-57 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-38-27 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-38-27 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-38-29 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-38-30 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-38-31 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-38-31 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-38-31 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-38-31 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-38-31 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-38-31 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-38-31 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-38-31 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-38-52 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-38-52 WARRING] XinTan::CommnunicationNet::openUdp: 
+[20251104-14-38-54 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-38-55 WARRING] XinTan::CommnunicationNet::connect: tcp connected
+[20251104-14-38-55 WARRING] XinTan::XtDaemon::transceiveCmd: cmd timeout:0
+[20251104-14-38-56 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-38-56 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-38-56 WARRING] XinTan::XtDaemon::ImageQueueFunc: image discard
+[20251104-14-38-56 WARRING] XinTan::CommnunicationNet::disconnect: error
+[20251104-14-38-56 WARRING] XinTan::CommnunicationNet::closeUdp: 
+[20251104-14-38-56 WARRING] XinTan::CommnunicationNet::udpReceiveFrame: udp error
+[20251104-14-38-56 WARRING] XinTan::CommnunicationNet::openUdp: 

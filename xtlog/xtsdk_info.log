@@ -1,0 +1,1173 @@
+---------init_logger---------
+[20251027-14-16-38 INFO] XinTan::XtDaemon::setConnectAddress: 10.1.1.104
+[20251027-14-16-38 INFO] XinTan::XtDaemon::startup: 
+[20251027-14-16-38 INFO] XinTan::XtSdk::start: 4
+[20251027-14-16-38 INFO] XinTan::openTcpThread: 
+[20251027-14-16-44 INFO] XinTan::XtSdk::stop: 
+[20251027-14-16-44 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251027-15-17-42 INFO] XinTan::XtDaemon::setConnectAddress: 10.1.1.104
+[20251027-15-17-42 INFO] XinTan::XtDaemon::startup: 
+[20251027-15-17-42 INFO] XinTan::XtSdk::start: 4
+[20251027-15-17-42 INFO] XinTan::openTcpThread: 
+[20251027-15-17-48 INFO] XinTan::XtSdk::stop: 
+[20251027-15-17-48 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251030-09-55-42 INFO] XinTan::XtDaemon::setConnectAddress: 10.1.1.104
+[20251030-09-55-42 INFO] XinTan::XtDaemon::startup: 
+[20251030-09-55-42 INFO] XinTan::XtSdk::start: 4
+[20251030-09-55-42 INFO] XinTan::openTcpThread: 
+[20251030-09-55-48 INFO] XinTan::openTcpThread: 
+[20251030-09-55-48 INFO] XinTan::XtSdk::stop: 
+[20251030-09-55-48 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251103-15-30-13 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251103-15-30-13 INFO] XinTan::XtDaemon::startup: 
+[20251103-15-30-13 INFO] XinTan::XtSdk::start: 4
+[20251103-15-30-13 INFO] XinTan::openTcpThread: 
+[20251103-15-30-16 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251103-15-30-16 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251103-15-30-16 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251103-15-30-16 INFO] XinTan::openTcpThread: 
+[20251103-15-30-16 INFO] XinTan::XtSdk::stop: 
+[20251103-15-30-16 INFO] XinTan::XtDaemon::shutdown: 
+[20251103-15-30-18 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+---------init_logger---------
+[20251103-15-43-10 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251103-15-43-10 INFO] XinTan::XtDaemon::startup: 
+[20251103-15-43-10 INFO] XinTan::XtSdk::start: 4
+[20251103-15-43-10 INFO] XinTan::openTcpThread: 
+[20251103-15-43-13 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251103-15-43-13 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251103-15-43-13 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251103-15-43-13 INFO] XinTan::openTcpThread: 
+[20251103-15-43-13 INFO] XinTan::XtSdk::stop: 
+[20251103-15-43-13 INFO] XinTan::XtDaemon::shutdown: 
+[20251103-15-43-15 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+---------init_logger---------
+---------init_logger---------
+[20251104-09-11-37 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-11-37 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-11-37 INFO] XinTan::openTcpThread: 
+[20251104-09-11-39 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-11-39 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-11-40 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-11-40 INFO] XinTan::openTcpThread: 
+[20251104-09-11-41 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-11-41 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-11-41 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-09-11-41 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-09-11-41 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-09-11-41 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-09-11-41 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-09-11-41 INFO] XinTan::XtSdk::stop: 
+[20251104-09-11-41 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 2000 
+[20251104-09-11-41 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-09-11-41 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-09-11-41 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-09-11-41 INFO] XinTan::XtSdk::start: 4
+[20251104-09-11-41 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-09-11-41 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-09-11-42 INFO] XinTan::XtSdk::stop: 
+[20251104-09-11-42 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-11-43 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-09-12-19 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-12-19 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-12-19 INFO] XinTan::openTcpThread: 
+[20251104-09-12-21 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-12-21 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-12-22 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-12-22 INFO] XinTan::openTcpThread: 
+[20251104-09-12-23 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-12-23 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-12-23 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-09-12-23 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-09-12-23 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-09-12-23 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-09-12-23 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-09-12-23 INFO] XinTan::XtSdk::stop: 
+[20251104-09-12-23 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 2000 
+[20251104-09-12-23 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-09-12-23 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-09-12-23 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-09-12-23 INFO] XinTan::XtSdk::start: 4
+[20251104-09-12-23 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-09-12-23 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-09-12-24 INFO] XinTan::XtSdk::stop: 
+[20251104-09-12-24 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-12-25 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+---------init_logger---------
+---------init_logger---------
+[20251104-09-30-57 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-30-57 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-30-57 INFO] XinTan::XtSdk::start: 4
+[20251104-09-30-57 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+---------init_logger---------
+---------init_logger---------
+---------init_logger---------
+[20251104-09-32-25 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-32-25 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-32-25 INFO] XinTan::openTcpThread: 
+[20251104-09-32-28 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-32-28 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-32-28 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-32-28 INFO] XinTan::openTcpThread: 
+[20251104-09-32-30 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-32-30 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-32-30 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-09-32-30 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-09-32-30 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-09-32-30 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-09-32-30 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-09-32-55 INFO] XinTan::XtSdk::start: 4
+[20251104-09-32-55 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-09-32-56 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-09-32-56 INFO] XinTan::XtSdk::stop: 
+[20251104-09-32-56 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-32-56 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-09-32-56 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-32-56 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-09-33-41 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-33-41 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-33-41 INFO] XinTan::XtSdk::start: 4
+[20251104-09-33-41 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-09-39-43 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-39-43 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-39-43 INFO] XinTan::openTcpThread: 
+[20251104-09-39-46 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-39-46 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-39-46 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-39-48 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+---------init_logger---------
+[20251104-09-40-04 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-40-04 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-40-04 INFO] XinTan::openTcpThread: 
+[20251104-09-40-06 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-40-06 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-40-07 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-40-08 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+---------init_logger---------
+[20251104-09-41-23 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-41-30 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-41-30 INFO] XinTan::openTcpThread: 
+[20251104-09-41-33 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-41-33 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-41-33 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-41-33 INFO] XinTan::openTcpThread: 
+[20251104-09-41-34 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-41-34 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-41-35 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-09-41-35 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-09-41-35 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-09-41-35 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-09-41-35 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+---------init_logger---------
+[20251104-09-41-54 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-41-54 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-41-54 INFO] XinTan::openTcpThread: 
+[20251104-09-41-57 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-41-57 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-41-57 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-41-57 INFO] XinTan::openTcpThread: 
+[20251104-09-41-58 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-41-58 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-41-58 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-09-41-58 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-09-41-58 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-09-41-58 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-09-41-58 INFO] XinTan::XtSdk::start: 4
+[20251104-09-41-58 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-09-41-59 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-09-41-59 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-09-41-59 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-09-41-59 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-09-41-59 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-09-41-59 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-09-41-59 INFO] XinTan::XtSdk::stop: 
+[20251104-09-41-59 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-41-59 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-09-42-14 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-42-15 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-42-15 INFO] XinTan::openTcpThread: 
+[20251104-09-42-18 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-42-18 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-42-18 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-42-18 INFO] XinTan::openTcpThread: 
+[20251104-09-42-20 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-42-20 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-42-20 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-09-42-20 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-09-42-20 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-09-42-20 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-09-42-20 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+---------init_logger---------
+[20251104-09-44-16 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-44-16 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-44-16 INFO] XinTan::openTcpThread: 
+[20251104-09-44-18 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-44-19 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-44-19 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-44-19 INFO] XinTan::openTcpThread: 
+[20251104-09-44-20 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-44-20 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-44-20 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-09-44-20 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-09-44-20 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-09-44-20 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-09-44-20 INFO] XinTan::XtSdk::start: 4
+[20251104-09-44-20 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-09-44-20 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-09-44-20 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-09-44-20 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-09-44-20 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-09-44-20 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-09-44-20 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-09-44-20 INFO] XinTan::XtSdk::stop: 
+[20251104-09-44-20 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-44-21 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-09-46-47 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-46-50 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-46-50 INFO] XinTan::openTcpThread: 
+[20251104-09-46-53 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-46-53 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-46-53 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-46-53 INFO] XinTan::openTcpThread: 
+[20251104-09-46-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-46-55 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-46-55 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-09-46-55 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-09-46-55 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-09-46-55 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-09-46-55 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-09-47-06 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-09-47-06 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-09-47-06 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-09-47-06 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-09-47-06 INFO] XinTan::XtSdk::start: 4
+[20251104-09-47-06 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-09-47-06 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-09-47-06 INFO] XinTan::XtSdk::stop: 
+[20251104-09-47-06 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-47-06 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-09-48-50 INFO] XinTan::XtSdk::stop: 
+[20251104-09-48-50 INFO] XinTan::XtDaemon::shutdown: 
+[20251104-09-48-51 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-48-51 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-48-51 INFO] XinTan::openTcpThread: 
+[20251104-09-48-53 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-48-54 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-48-54 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-48-54 INFO] XinTan::openTcpThread: 
+[20251104-09-48-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-48-55 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-48-55 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-09-48-55 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-09-48-55 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-09-48-55 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-09-48-55 INFO] XinTan::XtSdk::start: 4
+[20251104-09-48-55 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-09-48-56 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-09-48-56 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-09-48-56 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-09-48-56 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-09-48-56 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-09-48-56 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-09-48-56 INFO] XinTan::XtSdk::stop: 
+[20251104-09-48-56 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-48-56 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-09-53-16 INFO] XinTan::XtSdk::stop: 
+[20251104-09-53-16 INFO] XinTan::XtDaemon::shutdown: 
+[20251104-09-53-17 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-53-17 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-53-17 INFO] XinTan::openTcpThread: 
+[20251104-09-53-19 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-53-20 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-53-20 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-53-20 INFO] XinTan::openTcpThread: 
+[20251104-09-53-21 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-53-21 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-53-21 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-09-53-21 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-09-53-21 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-09-53-21 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-09-53-21 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-09-53-21 INFO] XinTan::XtSdk::start: 4
+[20251104-09-53-21 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-09-53-21 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-09-53-21 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-09-53-21 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-09-53-21 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-09-53-21 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-09-53-21 INFO] XinTan::XtSdk::stop: 
+[20251104-09-53-21 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-53-22 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-09-58-20 INFO] XinTan::XtSdk::stop: 
+[20251104-09-58-20 INFO] XinTan::XtDaemon::shutdown: 
+[20251104-09-58-21 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-09-58-21 INFO] XinTan::XtDaemon::startup: 
+[20251104-09-58-21 INFO] XinTan::openTcpThread: 
+[20251104-09-58-23 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-58-23 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-58-24 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-58-24 INFO] XinTan::openTcpThread: 
+[20251104-09-58-25 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-09-58-25 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-58-25 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-09-58-25 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-09-58-25 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-09-58-25 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-09-58-25 INFO] XinTan::XtSdk::start: 4
+[20251104-09-58-25 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-09-58-25 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-09-58-25 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-09-58-25 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-09-58-25 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-09-58-25 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-09-58-25 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-09-58-25 INFO] XinTan::XtSdk::stop: 
+[20251104-09-58-25 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-09-58-25 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-10-13-51 INFO] XinTan::XtSdk::stop: 
+[20251104-10-13-51 INFO] XinTan::XtDaemon::shutdown: 
+[20251104-10-13-52 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-10-13-52 INFO] XinTan::XtDaemon::startup: 
+[20251104-10-13-52 INFO] XinTan::openTcpThread: 
+[20251104-10-13-54 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-13-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-13-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-13-55 INFO] XinTan::openTcpThread: 
+[20251104-10-13-56 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-13-56 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-13-56 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-10-13-56 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-10-13-56 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-10-13-56 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-10-13-56 INFO] XinTan::XtSdk::start: 4
+[20251104-10-13-56 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-10-13-56 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-10-13-56 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-10-13-56 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-10-13-56 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-10-13-56 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-10-13-57 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-10-13-57 INFO] XinTan::XtSdk::stop: 
+[20251104-10-13-57 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-13-57 INFO] XinTan::XtDaemon::shutdown: 
+[20251104-10-14-00 INFO] XinTan::XtSdk::stop: 
+[20251104-10-14-00 INFO] XinTan::XtDaemon::shutdown: 
+[20251104-10-14-01 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-10-14-01 INFO] XinTan::XtDaemon::startup: 
+[20251104-10-14-01 INFO] XinTan::openTcpThread: 
+[20251104-10-14-04 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-14-04 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-14-04 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-14-04 INFO] XinTan::openTcpThread: 
+[20251104-10-14-06 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-14-06 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-14-06 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-10-14-06 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-10-14-06 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-10-14-06 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-10-14-06 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-10-14-06 INFO] XinTan::XtSdk::start: 4
+[20251104-10-14-06 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-10-14-06 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-10-14-06 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-10-14-06 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-10-14-06 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-10-14-06 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-10-14-06 INFO] XinTan::XtSdk::stop: 
+[20251104-10-14-06 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-14-06 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-10-16-22 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-10-16-22 INFO] XinTan::XtDaemon::startup: 
+[20251104-10-16-22 INFO] XinTan::openTcpThread: 
+[20251104-10-16-25 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-16-25 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-16-25 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-16-25 INFO] XinTan::openTcpThread: 
+[20251104-10-16-26 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-16-26 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-16-27 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-10-16-27 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-10-16-27 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-10-16-27 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-10-16-27 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-10-16-27 INFO] XinTan::XtSdk::stop: 
+[20251104-10-16-27 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-10-16-27 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-10-16-27 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-10-16-27 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-10-16-27 INFO] XinTan::XtSdk::start: 4
+[20251104-10-16-27 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-10-16-27 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-10-16-28 INFO] XinTan::XtSdk::stop: 
+[20251104-10-16-28 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-16-28 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-10-18-36 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-10-18-36 INFO] XinTan::XtDaemon::startup: 
+[20251104-10-18-36 INFO] XinTan::openTcpThread: 
+[20251104-10-18-38 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-18-38 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-18-38 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-18-38 INFO] XinTan::openTcpThread: 
+[20251104-10-18-40 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-18-40 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-18-40 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-10-18-40 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-10-18-40 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-10-18-40 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-10-18-40 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-10-18-40 INFO] XinTan::XtSdk::stop: 
+[20251104-10-18-40 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-10-18-40 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-10-18-40 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-10-18-40 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-10-18-40 INFO] XinTan::XtSdk::start: 4
+[20251104-10-18-40 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-10-18-40 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-10-18-41 INFO] XinTan::XtSdk::stop: 
+[20251104-10-18-41 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-18-41 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-10-22-15 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-10-22-15 INFO] XinTan::XtDaemon::startup: 
+[20251104-10-22-15 INFO] XinTan::openTcpThread: 
+[20251104-10-22-18 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-22-18 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-22-18 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-22-18 INFO] XinTan::openTcpThread: 
+[20251104-10-22-20 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-22-20 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-22-20 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-10-22-20 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-10-22-20 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-10-22-20 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-10-22-20 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-10-22-20 INFO] XinTan::XtSdk::stop: 
+[20251104-10-22-20 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-10-22-20 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-10-22-20 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-10-22-20 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-10-22-20 INFO] XinTan::XtSdk::start: 4
+[20251104-10-22-20 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-10-22-20 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-10-22-21 INFO] XinTan::XtSdk::stop: 
+[20251104-10-22-21 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-22-21 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-10-25-59 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-10-25-59 INFO] XinTan::XtDaemon::startup: 
+[20251104-10-25-59 INFO] XinTan::openTcpThread: 
+[20251104-10-26-01 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-26-01 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-26-02 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-26-02 INFO] XinTan::openTcpThread: 
+[20251104-10-26-03 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-26-03 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-26-03 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-10-26-03 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-10-26-03 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-10-26-03 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-10-26-03 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-10-26-03 INFO] XinTan::XtSdk::stop: 
+[20251104-10-26-03 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-10-26-03 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-10-26-03 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-10-26-03 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-10-26-03 INFO] XinTan::XtSdk::start: 4
+[20251104-10-26-03 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-10-26-03 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-10-26-04 INFO] XinTan::XtSdk::stop: 
+[20251104-10-26-04 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-26-05 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-10-27-15 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-10-27-15 INFO] XinTan::XtDaemon::startup: 
+[20251104-10-27-15 INFO] XinTan::openTcpThread: 
+[20251104-10-27-18 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-27-18 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-27-18 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-27-18 INFO] XinTan::openTcpThread: 
+[20251104-10-27-20 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-27-20 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-27-20 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-10-27-20 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-10-27-20 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-10-27-20 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-10-27-20 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-10-27-20 INFO] XinTan::XtSdk::stop: 
+[20251104-10-27-20 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-10-27-20 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-10-27-20 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-10-27-20 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-10-27-20 INFO] XinTan::XtSdk::start: 4
+[20251104-10-27-20 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-10-27-20 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-10-27-21 INFO] XinTan::XtSdk::stop: 
+[20251104-10-27-21 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-27-21 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-10-27-52 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-10-27-52 INFO] XinTan::XtDaemon::startup: 
+[20251104-10-27-52 INFO] XinTan::openTcpThread: 
+[20251104-10-27-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-27-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-27-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-27-55 INFO] XinTan::openTcpThread: 
+[20251104-10-27-57 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-27-57 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-27-57 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-10-27-57 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-10-27-57 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-10-27-57 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-10-27-57 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-10-27-57 INFO] XinTan::XtSdk::stop: 
+[20251104-10-27-57 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-10-27-57 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-10-27-57 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-10-27-57 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-10-27-57 INFO] XinTan::XtSdk::start: 4
+[20251104-10-27-57 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-10-27-57 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-10-27-58 INFO] XinTan::XtSdk::stop: 
+[20251104-10-27-58 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-27-58 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+---------init_logger---------
+[20251104-10-28-54 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-10-28-54 INFO] XinTan::XtDaemon::startup: 
+[20251104-10-28-54 INFO] XinTan::openTcpThread: 
+[20251104-10-28-56 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-28-56 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-28-57 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-28-57 INFO] XinTan::openTcpThread: 
+[20251104-10-28-58 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-28-58 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-28-58 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-10-28-58 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-10-28-58 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-10-28-58 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-10-28-58 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-10-28-58 INFO] XinTan::XtSdk::stop: 
+[20251104-10-28-58 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-10-28-58 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-10-28-58 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-10-28-58 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-10-28-58 INFO] XinTan::XtSdk::start: 4
+[20251104-10-28-58 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-10-28-58 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-10-29-00 INFO] XinTan::XtSdk::stop: 
+[20251104-10-29-00 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-29-00 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-10-29-52 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-10-29-52 INFO] XinTan::XtDaemon::startup: 
+[20251104-10-29-52 INFO] XinTan::openTcpThread: 
+[20251104-10-29-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-29-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-29-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-29-55 INFO] XinTan::openTcpThread: 
+[20251104-10-29-57 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-29-57 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-29-57 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-10-29-57 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-10-29-57 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-10-29-57 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-10-29-57 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-10-29-57 INFO] XinTan::XtSdk::stop: 
+[20251104-10-29-57 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-10-29-57 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-10-29-57 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-10-29-57 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-10-29-57 INFO] XinTan::XtSdk::start: 4
+[20251104-10-29-57 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-10-29-57 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-10-29-58 INFO] XinTan::XtSdk::stop: 
+[20251104-10-29-58 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-29-58 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-10-29-58 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-29-58 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-10-34-54 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-10-34-54 INFO] XinTan::XtDaemon::startup: 
+[20251104-10-34-54 INFO] XinTan::openTcpThread: 
+[20251104-10-34-56 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-34-57 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-34-57 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-34-57 INFO] XinTan::openTcpThread: 
+[20251104-10-34-58 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-10-34-58 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-34-58 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-10-34-58 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-10-34-58 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-10-34-58 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-10-34-58 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-10-34-58 INFO] XinTan::XtSdk::stop: 
+[20251104-10-34-58 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 2000 
+[20251104-10-34-58 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-10-34-58 INFO] XinTan::XtSdk::setMinAmplitude: 80
+[20251104-10-34-58 INFO] XinTan::XtSdk::setMaxFps: 30
+[20251104-10-34-58 INFO] XinTan::XtSdk::start: 4
+[20251104-10-34-58 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-10-34-59 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-10-35-00 INFO] XinTan::XtSdk::stop: 
+[20251104-10-35-00 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-10-35-00 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-11-17-23 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-11-17-23 INFO] XinTan::XtDaemon::startup: 
+[20251104-11-17-23 INFO] XinTan::openTcpThread: 
+[20251104-11-17-26 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-17-26 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-17-26 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-17-26 INFO] XinTan::openTcpThread: 
+[20251104-11-17-28 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-17-28 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-11-17-28 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-11-17-28 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-11-17-28 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-11-17-28 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-11-17-28 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-11-17-28 INFO] XinTan::XtSdk::stop: 
+[20251104-11-17-28 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 1 
+[20251104-11-17-28 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-11-17-28 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-11-17-28 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-11-17-28 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-11-17-28 INFO] XinTan::XtSdk::start: 3
+[20251104-11-17-28 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-11-17-28 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-11-17-28 INFO] XinTan::XtSdk::stop: 
+[20251104-11-17-28 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-11-17-28 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-11-21-09 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-11-21-09 INFO] XinTan::XtDaemon::startup: 
+[20251104-11-21-09 INFO] XinTan::openTcpThread: 
+[20251104-11-21-12 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-21-12 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-21-12 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-21-12 INFO] XinTan::openTcpThread: 
+[20251104-11-21-14 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-21-14 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-11-21-14 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-11-21-14 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-11-21-14 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-11-21-14 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-11-21-14 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-11-21-14 INFO] XinTan::XtSdk::stop: 
+[20251104-11-21-14 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 1 
+[20251104-11-21-14 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-11-21-14 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-11-21-14 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-11-21-14 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-11-21-14 INFO] XinTan::XtSdk::start: 3
+[20251104-11-21-14 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-11-21-14 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-11-21-14 INFO] XinTan::XtSdk::stop: 
+[20251104-11-21-14 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-11-21-14 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-11-24-11 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-11-24-11 INFO] XinTan::XtDaemon::startup: 
+[20251104-11-24-11 INFO] XinTan::openTcpThread: 
+[20251104-11-24-13 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-24-14 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-24-14 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-24-14 INFO] XinTan::openTcpThread: 
+[20251104-11-24-15 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-24-15 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-11-24-15 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-11-24-15 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-11-24-15 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-11-24-15 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-11-24-15 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-11-24-15 INFO] XinTan::XtSdk::stop: 
+[20251104-11-24-15 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 1 
+[20251104-11-24-15 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-11-24-15 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-11-24-15 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-11-24-15 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-11-24-15 INFO] XinTan::XtSdk::start: 3
+[20251104-11-24-15 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-11-24-16 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-11-24-16 INFO] XinTan::XtSdk::stop: 
+[20251104-11-24-16 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-11-24-16 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-11-47-20 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-11-47-20 INFO] XinTan::XtDaemon::startup: 
+[20251104-11-47-20 INFO] XinTan::openTcpThread: 
+[20251104-11-47-22 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-47-22 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-47-23 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-47-23 INFO] XinTan::openTcpThread: 
+[20251104-11-47-24 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-11-47-24 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-11-47-24 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-11-47-24 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-11-47-24 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-11-47-24 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-11-47-24 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-11-47-24 INFO] XinTan::XtSdk::stop: 
+[20251104-11-47-24 INFO] XinTan::XtSdk::setIntTimesus: 100 1200 0 1 
+[20251104-11-47-24 INFO] XinTan::XtSdk::setHdrMode: 1
+[20251104-11-47-24 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-11-47-24 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-11-47-24 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-11-47-24 INFO] XinTan::XtSdk::start: 3
+[20251104-11-47-24 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-11-47-24 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-11-47-25 INFO] XinTan::XtSdk::stop: 
+[20251104-11-47-25 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-11-47-25 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-19-16 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-19-16 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-19-16 INFO] XinTan::openTcpThread: 
+[20251104-14-19-18 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-19-18 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-19-19 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-19-19 INFO] XinTan::openTcpThread: 
+[20251104-14-19-20 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-19-20 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-19-20 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-19-20 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-19-20 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-19-20 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-19-20 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-19-20 INFO] XinTan::XtSdk::stop: 
+[20251104-14-19-20 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-19-20 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-19-20 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-19-20 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-19-20 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-19-20 INFO] XinTan::XtSdk::start: 3
+[20251104-14-19-20 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-19-20 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-19-20 INFO] XinTan::XtSdk::stop: 
+[20251104-14-19-20 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-19-21 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-20-28 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-20-28 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-20-28 INFO] XinTan::openTcpThread: 
+[20251104-14-20-30 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-20-30 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-20-30 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-20-30 INFO] XinTan::openTcpThread: 
+[20251104-14-20-32 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-20-32 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-20-32 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-20-32 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-20-32 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-20-32 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-20-32 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-20-32 INFO] XinTan::XtSdk::stop: 
+[20251104-14-20-32 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-20-32 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-20-32 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-20-32 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-20-32 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-20-32 INFO] XinTan::XtSdk::start: 3
+[20251104-14-20-32 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-20-32 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-20-32 INFO] XinTan::XtSdk::stop: 
+[20251104-14-20-32 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-20-32 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-20-56 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-20-56 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-20-56 INFO] XinTan::openTcpThread: 
+[20251104-14-20-59 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-20-59 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-20-59 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-20-59 INFO] XinTan::openTcpThread: 
+[20251104-14-21-00 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-21-00 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-21-01 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-21-01 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-21-01 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-21-01 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-21-01 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-21-01 INFO] XinTan::XtSdk::stop: 
+[20251104-14-21-01 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-21-01 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-21-01 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-21-01 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-21-01 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-21-01 INFO] XinTan::XtSdk::start: 3
+[20251104-14-21-01 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-21-01 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-21-01 INFO] XinTan::XtSdk::stop: 
+[20251104-14-21-01 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-21-01 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-21-24 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-21-24 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-21-24 INFO] XinTan::openTcpThread: 
+[20251104-14-21-27 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-21-27 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-21-27 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-21-27 INFO] XinTan::openTcpThread: 
+[20251104-14-21-29 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-21-29 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-21-29 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-21-29 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-21-29 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-21-29 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-21-29 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-21-29 INFO] XinTan::XtSdk::stop: 
+[20251104-14-21-29 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-21-29 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-21-29 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-21-29 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-21-29 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-21-29 INFO] XinTan::XtSdk::start: 3
+[20251104-14-21-29 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-21-29 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-21-29 INFO] XinTan::XtSdk::stop: 
+[20251104-14-21-29 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-21-29 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-21-56 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-21-56 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-21-56 INFO] XinTan::openTcpThread: 
+[20251104-14-21-58 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-21-58 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-21-59 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-21-59 INFO] XinTan::openTcpThread: 
+[20251104-14-22-00 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-22-00 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-22-00 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-22-00 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-22-00 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-22-00 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-22-00 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-22-00 INFO] XinTan::XtSdk::stop: 
+[20251104-14-22-00 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-22-00 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-22-00 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-22-00 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-22-00 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-22-00 INFO] XinTan::XtSdk::start: 3
+[20251104-14-22-00 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-22-00 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-22-00 INFO] XinTan::XtSdk::stop: 
+[20251104-14-22-00 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-22-00 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-22-00 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-22-00 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-29-53 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-29-53 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-29-53 INFO] XinTan::openTcpThread: 
+[20251104-14-29-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-29-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-29-56 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-29-56 INFO] XinTan::openTcpThread: 
+[20251104-14-29-57 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-29-57 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-29-57 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-29-57 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-29-57 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-29-57 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-29-57 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-29-57 INFO] XinTan::XtSdk::stop: 
+[20251104-14-29-57 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-29-57 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-29-57 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-29-57 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-29-57 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-29-57 INFO] XinTan::XtSdk::start: 3
+[20251104-14-29-57 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-29-57 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-29-58 INFO] XinTan::XtSdk::stop: 
+[20251104-14-29-58 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-29-58 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-30-17 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-30-17 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-30-17 INFO] XinTan::openTcpThread: 
+[20251104-14-30-20 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-30-20 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-30-20 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-30-20 INFO] XinTan::openTcpThread: 
+[20251104-14-30-22 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-30-22 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-30-22 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-30-22 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-30-22 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-30-22 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-30-22 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-30-22 INFO] XinTan::XtSdk::stop: 
+[20251104-14-30-22 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-30-22 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-30-22 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-30-22 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-30-22 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-30-22 INFO] XinTan::XtSdk::start: 3
+[20251104-14-30-22 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-30-22 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-30-22 INFO] XinTan::XtSdk::stop: 
+[20251104-14-30-22 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-30-22 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-30-43 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-30-43 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-30-43 INFO] XinTan::openTcpThread: 
+[20251104-14-30-46 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-30-46 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-30-46 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-30-46 INFO] XinTan::openTcpThread: 
+[20251104-14-30-48 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-30-48 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-30-48 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-30-48 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-30-48 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-30-48 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-30-48 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-30-48 INFO] XinTan::XtSdk::stop: 
+[20251104-14-30-48 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-30-48 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-30-48 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-30-48 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-30-48 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-30-48 INFO] XinTan::XtSdk::start: 3
+[20251104-14-30-48 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-30-48 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-30-48 INFO] XinTan::XtSdk::stop: 
+[20251104-14-30-48 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-30-48 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-31-08 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-31-08 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-31-08 INFO] XinTan::openTcpThread: 
+[20251104-14-31-10 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-31-11 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-31-11 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-31-11 INFO] XinTan::openTcpThread: 
+[20251104-14-31-12 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-31-12 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-31-12 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-31-12 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-31-12 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-31-12 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-31-12 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-31-13 INFO] XinTan::XtSdk::stop: 
+[20251104-14-31-13 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-31-13 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-31-13 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-31-13 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-31-13 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-31-13 INFO] XinTan::XtSdk::start: 3
+[20251104-14-31-13 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-31-13 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-31-13 INFO] XinTan::XtSdk::stop: 
+[20251104-14-31-13 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-31-13 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-31-34 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-31-34 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-31-34 INFO] XinTan::openTcpThread: 
+[20251104-14-31-36 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-31-36 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-31-37 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-31-37 INFO] XinTan::openTcpThread: 
+[20251104-14-31-38 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-31-38 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-31-38 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-31-38 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-31-38 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-31-38 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-31-38 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-31-38 INFO] XinTan::XtSdk::stop: 
+[20251104-14-31-38 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-31-38 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-31-38 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-31-38 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-31-38 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-31-38 INFO] XinTan::XtSdk::start: 3
+[20251104-14-31-38 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-31-38 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-31-39 INFO] XinTan::XtSdk::stop: 
+[20251104-14-31-39 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-31-39 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-31-59 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-31-59 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-31-59 INFO] XinTan::openTcpThread: 
+[20251104-14-32-01 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-32-01 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-32-02 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-32-02 INFO] XinTan::openTcpThread: 
+[20251104-14-32-03 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-32-03 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-32-03 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-32-03 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-32-03 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-32-03 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-32-03 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-32-03 INFO] XinTan::XtSdk::stop: 
+[20251104-14-32-03 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-32-03 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-32-03 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-32-03 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-32-03 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-32-03 INFO] XinTan::XtSdk::start: 3
+[20251104-14-32-03 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-32-03 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-32-04 INFO] XinTan::XtSdk::stop: 
+[20251104-14-32-04 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-32-04 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-34-00 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-34-00 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-34-00 INFO] XinTan::openTcpThread: 
+[20251104-14-34-03 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-34-03 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-34-03 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-34-03 INFO] XinTan::openTcpThread: 
+[20251104-14-34-05 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-34-05 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-34-05 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-34-05 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-34-05 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-34-05 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-34-05 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-34-05 INFO] XinTan::XtSdk::stop: 
+[20251104-14-34-05 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-34-05 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-34-05 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-34-05 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-34-05 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-34-05 INFO] XinTan::XtSdk::start: 3
+[20251104-14-34-05 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-34-05 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-34-05 INFO] XinTan::XtSdk::stop: 
+[20251104-14-34-05 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-34-05 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-34-26 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-34-26 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-34-26 INFO] XinTan::openTcpThread: 
+[20251104-14-34-28 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-34-29 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-34-29 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-34-29 INFO] XinTan::openTcpThread: 
+[20251104-14-34-30 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-34-30 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-34-30 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-34-30 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-34-30 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-34-30 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-34-30 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-34-30 INFO] XinTan::XtSdk::stop: 
+[20251104-14-34-30 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-34-30 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-34-30 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-34-30 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-34-30 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-34-30 INFO] XinTan::XtSdk::start: 3
+[20251104-14-34-30 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-34-31 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-34-31 INFO] XinTan::XtSdk::stop: 
+[20251104-14-34-31 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-34-31 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-34-52 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-34-52 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-34-52 INFO] XinTan::openTcpThread: 
+[20251104-14-34-54 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-34-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-34-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-34-55 INFO] XinTan::openTcpThread: 
+[20251104-14-34-56 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-34-56 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-34-56 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-34-56 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-34-56 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-34-56 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-34-56 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-34-56 INFO] XinTan::XtSdk::stop: 
+[20251104-14-34-56 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-34-56 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-34-56 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-34-56 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-34-56 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-34-56 INFO] XinTan::XtSdk::start: 3
+[20251104-14-34-56 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-34-57 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-34-57 INFO] XinTan::XtSdk::stop: 
+[20251104-14-34-57 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-34-57 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-38-26 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-38-26 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-38-26 INFO] XinTan::openTcpThread: 
+[20251104-14-38-29 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-38-29 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-38-29 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-38-29 INFO] XinTan::openTcpThread: 
+[20251104-14-38-31 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-38-31 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-38-31 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-38-31 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-38-31 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-38-31 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-38-31 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-38-31 INFO] XinTan::XtSdk::stop: 
+[20251104-14-38-31 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-38-31 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-38-31 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-38-31 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-38-31 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-38-31 INFO] XinTan::XtSdk::start: 3
+[20251104-14-38-31 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-38-31 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-38-31 INFO] XinTan::XtSdk::stop: 
+[20251104-14-38-31 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-38-31 INFO] XinTan::XtDaemon::shutdown: 
+---------init_logger---------
+[20251104-14-38-51 INFO] XinTan::XtDaemon::setConnectAddress: 192.168.1.113
+[20251104-14-38-51 INFO] XinTan::XtDaemon::startup: 
+[20251104-14-38-51 INFO] XinTan::openTcpThread: 
+[20251104-14-38-53 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-38-53 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-38-54 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-38-54 INFO] XinTan::openTcpThread: 
+[20251104-14-38-55 INFO] XinTan::XtDaemon::transceiveCmd: try again cmd 0
+[20251104-14-38-55 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-38-55 INFO] XinTan::XtSdk::eventInternalProcess: 254
+[20251104-14-38-55 INFO] XinTan::XtSdk::eventInternalProcess: sn =xts240proc20230513000026
+[20251104-14-38-55 INFO] XinTan::XtSdk::eventInternalProcess: fw =xtfw-rt-v2.25.4
+[20251104-14-38-55 INFO] XinTan::XtSdk::customCmd: 18 0
+[20251104-14-38-55 INFO] XinTan::XtSdk::eventInternalProcess: getLensCalidata=true cx=157.572006 cy=118.695999 fx=245.686996 fy=245.979004 k1=-0.279715 k2=0.188174 k3=-0.095581 p1=0.001625 p2=0.000443
+[20251104-14-38-55 INFO] XinTan::XtSdk::stop: 
+[20251104-14-38-55 INFO] XinTan::XtSdk::setIntTimesus: 100 1000 0 1 
+[20251104-14-38-55 INFO] XinTan::XtSdk::setHdrMode: 0
+[20251104-14-38-55 INFO] XinTan::XtSdk::setMinAmplitude: 120
+[20251104-14-38-55 INFO] XinTan::XtSdk::setMaxFps: 15
+[20251104-14-38-55 INFO] XinTan::XtSdk::setModFreq: 2
+[20251104-14-38-55 INFO] XinTan::XtSdk::start: 3
+[20251104-14-38-55 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-38-55 INFO] XinTan::XtDaemon::reportImage: imageversion=3
+[20251104-14-38-56 INFO] XinTan::XtSdk::stop: 
+[20251104-14-38-56 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-38-56 INFO] XinTan::XtDaemon::updateDevState: Stream
+[20251104-14-38-56 INFO] XinTan::XtDaemon::updateDevState: Idle
+[20251104-14-38-56 INFO] XinTan::XtDaemon::shutdown: 
